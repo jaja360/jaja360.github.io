@@ -17,14 +17,14 @@ marketing:
   seo:
     site_type: Person
     local_business_type: ''
-    org_name: ''
-    description: 'A highly-customizable Hugo academic resume theme powered by Hugo Blox Builder.'
-    twitter: 'GetResearchDev'
+    org_name: 'Université du Québec à Montréal'
+    description: 'PhD Student'
+    twitter: 'jaja360'
   analytics:
-    google_analytics: ''
+    google_analytics: 'G-3DK1P1M2Y3'
     baidu_tongji: ''
     google_tag_manager: ''
-    microsoft_clarity: ''
+    microsoft_clarity: 'l94jsizn9g'
   verification:
     google: ''
     baidu: ''
@@ -36,7 +36,7 @@ header:
     enable: true
     align: l
     show_logo: true
-    show_language: false
+    show_language: true
     show_day_night: true
     show_search: true
     highlight_active_link: true
@@ -45,7 +45,7 @@ header:
 
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Jaël Champagne Gareau. This work is licensed under {license}'
     license:
       enable: true
       allow_derivatives: false
@@ -55,9 +55,9 @@ footer:
 # Localization
 
 locale:
-  date_format: 'Jan 2, 2006'
-  time_format: '3:04 PM'
-  address_format: en-us
+  date_format: 'Monday, 02 Jan 2006'
+  time_format: '15:04'
+  address_format: fr-ca
 
 # Site features
 
@@ -66,11 +66,11 @@ features:
     theme_light: github-light
     theme_dark: dracula
   math:
-    enable: false
+    enable: true
   privacy_pack:
     enable: false
   repository:
-    url: 'https://github.com/<username>/<repository>'
+    url: 'https://github.com/jaja360/jaja360.github.io'
     content_dir: content
     branch: main
   avatar:
