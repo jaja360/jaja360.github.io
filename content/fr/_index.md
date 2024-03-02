@@ -11,6 +11,17 @@ sections:
       username: admin
 
   - block: portfolio
+    id: courses
+    design:
+      columns: '2'
+      view: compact
+    content:
+      title: Enseignement
+      filters:
+        folders:
+          - courses
+
+  - block: portfolio
     id: projects
     design:
       columns: '1'

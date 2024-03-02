@@ -30,7 +30,6 @@ marketing:
     baidu: ''
 
 # Site header
-
 header:
   navbar:
     enable: true
@@ -42,7 +41,6 @@ header:
     highlight_active_link: true
 
 # Site footer
-
 footer:
   copyright:
     notice: '© {year} Jaël Champagne Gareau. This work is licensed under {license}'

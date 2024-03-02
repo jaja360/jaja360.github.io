@@ -11,11 +11,22 @@ sections:
       username: admin
 
   - block: portfolio
+    id: courses
+    design:
+      columns: '2'
+      view: compact
+    content:
+      title: Teaching
+      filters:
+        folders:
+          - courses
+
+  - block: portfolio
     id: projects
     design:
       columns: '1'
       view: showcase
-      flip_alt_rows: false
+      flip_alt_rows: true
     content:
       title: Projects
       filters:

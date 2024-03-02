@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+hugo --gc --minify
+rsync -avz --delete public/ jgareau@192.168.0.20:~/site
