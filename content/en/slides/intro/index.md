@@ -1,23 +1,98 @@
 ---
-title: Slides
-summary: An introduction to using Hugo Blox Builder's Slides feature.
+
+title: "INF3105: Présentation du cours"
+summary: "Introduction au cours INF3105: Structures de données et Algorithmes"
 authors: []
-tags: []
+tags: [INF3105]
 categories: []
 date: '2019-02-05T00:00:00Z'
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
   theme: black
-  # Choose a code highlighting style (if highlighting enabled in `params.toml`)
-  #   Light style: github. Dark style: dracula (default).
   highlight_style: dracula
+  reveal_options:
+    slide_number: c/t
+    mouse_wheel: true
+    pdf_separate_fragments: false
+
 ---
 
-# Create slides in Markdown with Hugo Blox Builder
+## INF3105: Structures de données et Algorithmes
+### Été 2024
 
 [Hugo Blox Builder](https://hugoblox.com/) | [Documentation](https://docs.hugoblox.com/content/slides/)
 
 ---
+
+## Test c++
+
+```c++
+static void blit(const array<char, 40 * 25>& data) {
+  copy(data.begin(), data.end(),
+  reinterpret_cast<char*>(0x0400));
+}
+
+void draw(Point, string_view);
+```
+
+---
+
+## Fragments
+
+Make content appear incrementally
+
+```
+{{%/* fragment */%}} One {{%/* /fragment */%}}
+{{%/* fragment */%}} **Two** {{%/* /fragment */%}}
+{{%/* fragment */%}} Three {{%/* /fragment */%}}
+```
+
+Press `Space` to play!
+
+{{% fragment class="current-visible" %}} One {{% /fragment %}}
+{{% fragment %}} **Two** {{% /fragment %}}
+{{% fragment %}} Three {{% /fragment %}}
+
+---
+
+```mermaid
+graph LR;
+  A-->C;
+  B-->D;
+  C-->D;
+  A-->B;
+```
+
+A fragment can accept two optional parameters:
+
+- `class`: use a custom style (requires definition in custom CSS)
+- `weight`: sets the order in which a fragment appears
+
+---
+
+## Test
+
+- Item 1
+- Item 2
+
+```js [1-2|3|4]
+let a = 1;
+let b = 2;
+let c = x => 1 + 2 + x;
+c(3);
+```
+
+```python [10: 1-3]
+def main():
+  print("Hello, World!")
+  for i in range(10):
+    print(i)
+```
+
+---
+
+<!-- {{< slide background-color="blue" >}} -->
+{{< slide background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)" >}}
 
 ## Features
 
@@ -63,33 +138,8 @@ In-line math: $x + y = z$
 Block math:
 
 $$
-f\left( x \right) = \;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
+f\left( x \right) = \frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
 $$
-
----
-
-## Fragments
-
-Make content appear incrementally
-
-```
-{{%/* fragment */%}} One {{%/* /fragment */%}}
-{{%/* fragment */%}} **Two** {{%/* /fragment */%}}
-{{%/* fragment */%}} Three {{%/* /fragment */%}}
-```
-
-Press `Space` to play!
-
-{{% fragment %}} One {{% /fragment %}}
-{{% fragment %}} **Two** {{% /fragment %}}
-{{% fragment %}} Three {{% /fragment %}}
-
----
-
-A fragment can accept two optional parameters:
-
-- `class`: use a custom style (requires definition in custom CSS)
-- `weight`: sets the order in which a fragment appears
 
 ---
 
@@ -167,3 +217,15 @@ Create `assets/css/reveal_custom.css` with:
 [Ask](https://discord.gg/z8wNYzb)
 
 [Documentation](https://docs.hugoblox.com/content/slides/)
+
+---
+
+# C++ Listing
+
+```cpp [1-2|3-4]
+#include <iostream>
+int main() {
+  std::cout << "Hello, World!";
+  return 0;
+}
+```

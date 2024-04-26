@@ -8,7 +8,7 @@ authors:
 - Éric Beaudry
 - Vladimir Makarenkov
 author_notes: []
-tags: [MDP, Cache Memory, Data Structure]
+tags: [MDP, Cache Memory, Data Structures]
 categories: []
 projects: [MDP]
 date: '2022-01-01'

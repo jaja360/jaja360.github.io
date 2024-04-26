@@ -6,6 +6,8 @@ summary: "- **Objectif**: Approfondir les connaissances des structures de donné
 tags: [Data Structure, Algorithms, C++, UQAM]
 date: "2023-04-29T00:00:00Z"
 
+draft: true
+
 ---
 
 ```mermaid
