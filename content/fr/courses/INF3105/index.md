@@ -22,6 +22,8 @@ graph LR;
     $$\sum_{i=1}^n i = \frac{n(n+1)}{2}$$
 {{</math>}}
 
+[Visualiseur en ligne](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
+
 | #    | Date     | Contenu               | Lectures            |
 | ---: | :---:    | :---                  | :---                |
 | 1    | 30 avril | [Présentation du cours]({{< relref "/slides/intro" >}}) | [Beaudry] Section 1 |

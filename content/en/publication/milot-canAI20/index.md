@@ -19,7 +19,7 @@ featured: false
 draft: false
 
 publication: 'Advances in Artificial Intelligence (Canadian AI 2020)'
-publication_short: 'CAnadian AI 2020'
+publication_short: 'Canadian AI 2020'
 doi: '10.1007/978-3-030-47358-7_42'
 
 publication_types:
