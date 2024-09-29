@@ -26,7 +26,7 @@ sections:
     design:
       columns: '1'
       view: showcase
-      flip_alt_rows: false
+      flip_alt_rows: true
     content:
       title: Projets
       filters:
@@ -70,7 +70,7 @@ sections:
       contact_links:
         - icon: twitter
           icon_pack: fab
-          name: DM Me
+          name: Envoyer un MP
           link: 'https://twitter.com/jaja360'
       autolink: true
       form:
