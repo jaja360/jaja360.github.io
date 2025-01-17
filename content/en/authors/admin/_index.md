@@ -17,15 +17,15 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: PhD Student in Computer Science
+role: Postdoctoral Researcher in Computer Science
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: Université du Québec à Montréal
-    url: https://uqam.ca/
+  - name: Université TÉLUQ
+    url: https://teluq.ca/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include AI, data structures, algorithms and HPC.
+bio: My research interests include AI and exploitation of modern computer architecture when designing and implementing algorithms and data structures.
 
 # Interests to show in About widget
 interests:
@@ -37,6 +37,9 @@ interests:
 # Education to show in About widget
 education:
   courses:
+  - course: Postdoctoral studies in Computer Science
+    institution: Université TÉLUQ
+    year: 2025
   - course: PhD in Computer Science
     institution: Université du Québec à Montréal
     year: 2024
@@ -82,10 +85,13 @@ highlight_name: true
 
 ---
 
-I am currently a Computer science PhD candidate at Université du Québec
-à Montréal (UQAM). My Master's research focused on planning algorithms for
-electric vehicles (EV) to find the optimal path between two points such that
-the total journey time (including the travel time, charging time and expected
-waiting time at the charging stations) is minimized.
+I am currently a postdoctoral researcher in computer science at Université
+TÉLUQ, where my research focuses on speeding up the conversion of floating-point
+numbers into decimal strings. During my doctoral studies, I designed algorithms
+and data structures that leverage modern computer architectures to solve large
+instances of Markov decision processes (MDPs). In my master’s research, I
+developed routing algorithms for electric vehicles aimed at determining the
+optimal path between two points while minimizing total travel time (including
+driving, charging, and expected waiting time at charging stations).
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "en/uploads/cv.pdf">}}résumé{{</ staticref >}}.

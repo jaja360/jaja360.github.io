@@ -17,26 +17,29 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Doctorant en informatique
+role: Chercheur postdoctoral en informatique
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: Université du Québec à Montréal
-    url: https://uqam.ca/
+  - name: Université TÉLUQ
+    url: https://teluq.ca/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Mes intérêts de recherche incluent l'intelligence artificielle, les structures de données, les algorithmes et le programmation haute-performance.
+bio: Mes intérêts de recherche incluent l'intelligence artificielle et l'exploitation de l'architecture moderne des ordinateurs lors de la conception et de l'implémentation d'algorithmes et de structures de données.
 
 # Interests to show in About widget
 interests:
   - Intelligence artificielle
-  - Planification automatisée
+  - Planification automatique
   - Structures de données et algorithmes
   - Programmation haute-performance
 
 # Education to show in About widget
 education:
   courses:
+  - course: Études postdoctorales en informatique
+    institution: Université TÉLUQ
+    year: 2025
   - course: Doctorat en informatique
     institution: Université du Québec à Montréal
     year: 2024
@@ -82,11 +85,14 @@ highlight_name: true
 
 ---
 
-Je suis présentement candidat au doctorat en informatique à l'Université du
-Québec à Montréal (UQAM). Ma recherche de maîtrise a porté sur le développement
-d'algorithmes de planification d'itinéraires pour véhicules électriques (VÉ).
-L'objectif étant de trouver le chemin optimal entre deux points, de sorte que
-le temps total du trajet (incluant le temps de déplacement, de charge et le
-temps espéré d'attente aux bornes) soit minimal.
+Je suis actuellement chercheur postdoctoral en informatique à l’Université
+TÉLUQ, où mes travaux de recherche portent sur l’accélération de la conversion
+de nombres flottants en chaînes de caractères décimales. Au cours de mon
+doctorat, j’ai conçu des algorithmes et des structures de données exploitant
+l’architecture moderne des ordinateurs afin de résoudre de grandes instances de
+processus décisionnels de Markov (MDP). Durant ma maîtrise, j’ai développé des
+algorithmes de planification d’itinéraires pour véhicules électriques, visant à
+déterminer le chemin optimal entre deux points tout en minimisant le temps total
+du trajet (incluant le temps de déplacement, la recharge et l’attente aux bornes).
 
 {{< icon name="download" pack="fas" >}} Téléchargez mon {{< staticref "fr/uploads/cv.pdf">}}CV{{< /staticref >}}.
