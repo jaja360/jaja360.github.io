@@ -1,0 +1,35 @@
+\definecolor{DarkTechBlue}{RGB}{44,62,80}  % Hex #2c3e50
+\definecolor{DarkDataGreen}{RGB}{26,83,92} % Hex #1a535c
+\usetikzlibrary{shapes, arrows.meta}
+\begin{tikzpicture}[
+    rat/.style={rectangle, fill=DarkTechBlue, draw=DarkTechBlue!50, minimum width=2cm, minimum height=0.5cm, text=white},
+    prf/.style={rectangle, fill=DarkDataGreen, draw=DarkDataGreen!50, minimum width=3cm, minimum height=0.5cm, text=white},
+    arrow/.style={-Latex, dashed, thick, draw=white}
+  ]
+
+  % Table d'alias des registres
+  \node[rat] (rax) at (0,4) {RAX};
+  \node[rat] (rbx) at (0,3) {RBX};
+  \node[rat] (rcx) at (0,2) {RCX};
+  \node[rat] (rdx) at (0,1) {RDX};
+  \node[rat] (dots) at (0,0) {$\cdots$};
+  \node[rat] (r15) at (0,-1) {R15};
+
+  % Banc de registres
+  \node[prf] (p1) at (5,4) {P1: 0x7ffe89ab};
+  \node[prf] (p2) at (5,3) {P2: 0x0000555d};
+  \node[prf] (p3) at (5,2) {P3: 0xffff8140};
+  \node[prf] (p4) at (5,1) {P4: 0x2fc15942};
+  \node[prf] (pdots) at (5,0) {$\cdots$};
+  \node[prf] (p143) at (5,-1) {P143: 0x0000002a};
+  \node[prf] (pdots2) at (5,-2) {$\cdots$};
+
+  \draw[arrow] (rax) -- (p2);
+  \draw[arrow] (rbx) -- (p1);
+  \draw[arrow] (rcx) -- (p143);
+  \draw[arrow] (rdx) -- (p3);
+  \draw[arrow] (r15) -- (p4);
+
+  \node[align=center, font=\bfseries, text=white] at (0,5) {Table d'alias des registres};
+  \node[align=center, font=\bfseries, text=white] at (5,5) {Banc de registres};
+\end{tikzpicture}
