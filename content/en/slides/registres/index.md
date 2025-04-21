@@ -93,6 +93,186 @@ Qu'est-ce qui explique la différence de performance?
 
 ---
 
-{{< slide background-image="./figs/RAT.svg" background-size="35%" background-position="center" background-repeat="no-repeat" >}}
+{{< slide background-image="./figs/RAT.svg" background-size="contain" background-position="center" background-repeat="no-repeat" >}}
+
+
+---
+
+RCX:&nbsp;&nbsp;$P_0$
+
+| Instruction |  Dest  |  Src  |
+|:-----------:|-------:|------:|
+|  add rcx, 1 |        |       |
+|  add rcx, 1 |        |       |
+|  add rcx, 1 |        |       |
+|  add rcx, 1 |        |       |
+|     ...     |        |       |
+
+---
+
+RCX:&nbsp;&nbsp;$\cancel{P_0},~P_1$
+
+| Instruction |  Dest  |  Src  |
+|:-----------:|-------:|------:|
+|  add rcx, 1 | $P_1$  | $P_0$ |
+|  add rcx, 1 |        |       |
+|  add rcx, 1 |        |       |
+|  add rcx, 1 |        |       |
+|     ...     |        |       |
+
+---
+
+RCX:&nbsp;&nbsp;$\cancel{P_0},~\cancel{P_1},~P_2$
+
+ | Instruction   | Dest                                     | Src                                      |
+ | :-----------: | -------:                                 | ------:                                  |
+ | add rcx, 1    | <span style="color:#445fe8">$P_1$</span> | $P_0$                                    |
+ | add rcx, 1    | $P_2$                                    | <span style="color:#445fe8">$P_1$</span> |
+ | add rcx, 1    |                                          |                                          |
+ | add rcx, 1    |                                          |                                          |
+ | ...           |                                          |                                          |
+
+---
+
+RCX:&nbsp;&nbsp;$\cancel{P_0},~\cancel{P_1},$&nbsp;&nbsp;$\cancel{P_2},~P_3$
+
+ | Instruction   | Dest                                     | Src                                      |
+ | :-----------: | -------:                                 | ------:                                  |
+ | add rcx, 1    | <span style="color:#445fe8">$P_1$</span> | $P_0$                                    |
+ | add rcx, 1    | <span style="color:#fcaa67">$P_2$</span> | <span style="color:#445fe8">$P_1$</span> |
+ | add rcx, 1    | $P_3$                                    | <span style="color:#fcaa67">$P_2$</span> |
+ | add rcx, 1    |                                          |                                          |
+ | ...           |                                          |                                          |
+
+---
+
+RCX:&nbsp;&nbsp;$\cancel{P_0}$,&nbsp;&nbsp;$\cancel{P_1}$,&nbsp;&nbsp;$\cancel{P_2}$,&nbsp;&nbsp;$\cancel{P_3},~P_4$
+
+ | Instruction   | Dest                                     | Src                                      |
+ | :-----------: | -------:                                 | ------:                                  |
+ | add rcx, 1    | <span style="color:#445fe8">$P_1$</span> | $P_0$                                    |
+ | add rcx, 1    | <span style="color:#fcaa67">$P_2$</span> | <span style="color:#445fe8">$P_1$</span> |
+ | add rcx, 1    | <span style="color:#b0413e">$P_3$</span> | <span style="color:#fcaa67">$P_2$</span> |
+ | add rcx, 1    | $P_4$                                    | <span style="color:#b0413e">$P_3$</span> |
+ | ...           | ...                                      | ...                                      |
+
+---
+
+RAX:&nbsp;&nbsp;$P_0$&nbsp;&nbsp;&nbsp;&nbsp;RCX:&nbsp;&nbsp;$\ast$
+
+ | Instruction  | Dest     | Src     |
+ | :----------- | -------: | ------: |
+ | mov rcx, rax |          |         |
+ | add rcx, 1   |          |         |
+ | mov rcx, rax |          |         |
+ | add rcx, 1   |          |         |
+ | ...          |          |         |
+
+---
+
+RAX:&nbsp;&nbsp;$P_0$&nbsp;&nbsp;&nbsp;&nbsp;RCX:&nbsp;&nbsp;$\cancel{\ast},~P_1$
+
+ | Instruction  | Dest     | Src     |
+ | :----------- | -------: | ------: |
+ | mov rcx, rax | $P_1$    | $P_0$   |
+ | add rcx, 1   |          |         |
+ | mov rcx, rax |          |         |
+ | add rcx, 1   |          |         |
+ | ...          |          |         |
+
+---
+
+RAX:&nbsp;&nbsp;$P_0$&nbsp;&nbsp;&nbsp;&nbsp;RCX:&nbsp;&nbsp;$\cancel{\ast},~\cancel{P_1},~P_2$
+
+ | Instruction  | Dest                                     | Src                                      |
+ | :----------- | -------:                                 | ------:                                  |
+ | mov rcx, rax | <span style="color:#445fe8">$P_1$</span> | $P_0$                                    |
+ | add rcx, 1   | $P_2$                                    | <span style="color:#445fe8">$P_1$</span> |
+ | mov rcx, rax |                                          |                                          |
+ | add rcx, 1   |                                          |                                          |
+ | ...          |                                          |                                          |
+
+---
+
+RAX:&nbsp;&nbsp;$P_0$&nbsp;&nbsp;&nbsp;&nbsp;RCX:&nbsp;&nbsp;$\cancel{\ast},~\cancel{P_1}$,&nbsp;&nbsp;$\cancel{P_2},~P_3$
+
+ | Instruction  | Dest                                     | Src                                      |
+ | :----------- | -------:                                 | ------:                                  |
+ | mov rcx, rax | <span style="color:#445fe8">$P_1$</span> | $P_0$                                    |
+ | add rcx, 1   | $P_2$                                    | <span style="color:#445fe8">$P_1$</span> |
+ | mov rcx, rax | $P_3$                                    | $P_0$                                    |
+ | add rcx, 1   |                                          |                                          |
+ | ...          |                                          |                                          |
+
+---
+
+RAX:&nbsp;&nbsp;$P_0$&nbsp;&nbsp;&nbsp;&nbsp;RCX:&nbsp;&nbsp;$\cancel{\ast},~\cancel{P_1}$,&nbsp;&nbsp;$\cancel{P_2}$,&nbsp;&nbsp;$\cancel{P_3}$,&nbsp;&nbsp;$P_4$
+
+ | Instruction  | Dest                                     | Src                                      |
+ | :----------- | -------:                                 | ------:                                  |
+ | mov rcx, rax | <span style="color:#445fe8">$P_1$</span> | $P_0$                                    |
+ | add rcx, 1   | $P_2$                                    | <span style="color:#445fe8">$P_1$</span> |
+ | mov rcx, rax | <span style="color:#b0413e">$P_3$</span> | $P_0$                                    |
+ | add rcx, 1   | $P_4$                                    | <span style="color:#b0413e">$P_3$</span> |
+ | ...          |                                          |                                          |
+
+---
+
+### Optimisation: élimination des `MOV`
+
+ | Instruction  | Dest                                     | Src                                      |
+ | :----------- | -------:                                 | ------:                                  |
+ | mov rcx, rax | <span style="color:#445fe8">$P_0$</span> | $P_0$                                    |
+ | add rcx, 1   | $P_1$                                    | <span style="color:#445fe8">$P_0$</span> |
+ | mov rcx, rax | <span style="color:#b0413e">$P_0$</span> | $P_0$                                    |
+ | add rcx, 1   | $P_2$                                    | <span style="color:#b0413e">$P_0$</span> |
+ | ...          |                                          |                                          |
+
+---
+
+{{< slide background-image="./figs/zen4.png" background-size="contain" background-position="center" background-repeat="no-repeat" >}}
+
+---
+
+### Cas d'application
+
+{{% fragment %}}
+```asm
+R1 ← mem[1]
+R1 ← R1 + 1
+mem[1] ← R1
+R1 ← mem[10]
+R1 ← R1 + 4
+mem[11] ← R1
+```
+{{% /fragment %}}
+
+{{% fragment %}}
+```asm
+R1a ← mem[1]
+R1b ← R1a + 1
+mem[1] ← R1b
+R1c ← mem[10]
+R1d ← R1c + 4
+mem[11] ← R1d
+```
+{{% /fragment %}}
+
+{{% fragment %}}
+```asm
+R1a ← mem[1]   &  R1c ← mem[10]
+R1b ← R1a + 1  &  R1d ← R1c + 4
+mem[1] ← R1b   &  mem[11] ← R1d
+```
+{{% /fragment %}}
+
+---
+
+### En résumé
+
+- $16$ registres architecturaux (x86-64).
+- Au moins $120$ registres physiques.
+- Table d'alias des registres (RAT): registres architecturaux $\to$ registres physiques.
+- La RAT élimine les fausses dépendances.
 
 ---
