@@ -19,7 +19,7 @@ draft: false
 
 publication: 'Proceedings of the International Federation of Classification Societies Conference'
 publication_short: 'IFCS 2024'
-doi: ''
+doi: '10.1007/978-3-031-85870-3_7'
 
 publication_types:
 - paper-conference
