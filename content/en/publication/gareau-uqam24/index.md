@@ -94,7 +94,7 @@ synthétiques, pouvant générer des instances couvrant un vaste éventail de
 propriétés topologiques."
 
 # Links
-url_pdf: ''
+url_pdf: 'https://archipel.uqam.ca/18692/'
 url_code: ''
 url_dataset: ''
 url_poster: ''
