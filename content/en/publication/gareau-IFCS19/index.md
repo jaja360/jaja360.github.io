@@ -25,18 +25,19 @@ publication_types:
 - paper-conference
 
 summary: ''
-abstract: 'Over the past few years, several studies have considered the problem
-of Electric Vehicle Path Planning with intermediate recharge (EVPP-R) that
-consists of finding the shortest path between two given points by traveling
-through one or many charging stations, without exceeding the vehicle’s range.
-Unfortunately, the exact solution to this problem has a high computational cost.
-Therefore, speedup techniques are generally necessary (e.g., contraction
-hierarchies). In this paper, we propose and evaluate a new fast and intuitive
-graph clustering technique, which is applied on a real map with charging station
-data. We show that by grouping nearby stations, we can reduce the number of
-stations considered by a factor of 13 and increase the speed of computation by a
-factor of 35, while having a very limited trade-off increase, of less than 1%,
-on the average journey duration time.'
+abstract: |
+  Over the past few years, several studies have considered the problem of
+  Electric Vehicle Path Planning with intermediate recharge (EVPP-R) that
+  consists of finding the shortest path between two given points by traveling
+  through one or many charging stations, without exceeding the vehicle’s range.
+  Unfortunately, the exact solution to this problem has a high computational
+  cost. Therefore, speedup techniques are generally necessary (e.g., contraction
+  hierarchies). In this paper, we propose and evaluate a new fast and intuitive
+  graph clustering technique, which is applied on a real map with charging
+  station data. We show that by grouping nearby stations, we can reduce the
+  number of stations considered by a factor of 13 and increase the speed of
+  computation by a factor of 35, while having a very limited trade-off increase,
+  of less than 1%, on the average journey duration time.
 
 # Links
 url_pdf: ''

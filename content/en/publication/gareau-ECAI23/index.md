@@ -26,19 +26,21 @@ publication_types:
 - paper-conference
 
 summary: ''
-abstract: 'Automated planning research often focuses on developing new
-algorithms to improve the computational performance of planners, but effective
-implementation can also play a significant role. Hardware features such as
-memory hierarchy can yield substantial running time improvements when optimized.
-In this paper, we propose two state-reordering techniques for the Topological
-Value Iteration (TVI) algorithm. Our first technique organizes states in memory
-so that those belonging to the same Strongly Connected Component (SCC) are
-contiguous, while our second technique optimizes state value propagation by
-reordering states within each SCC. We analyze existing planning algorithms with
-respect to their cache efficiency and describe domain characteristics which can
-provide an advantage to each of them. Empirical results show that, in many
-instances, our new algorithms, called eTVI and eiTVI, run several times faster
-than traditional VI, TVI, LRTDP and ILAO* techniques.'
+abstract: |
+  Automated planning research often focuses on developing new algorithms to
+  improve the computational performance of planners, but effective
+  implementation can also play a significant role. Hardware features such as
+  memory hierarchy can yield substantial running time improvements when
+  optimized. In this paper, we propose two state-reordering techniques for the
+  Topological Value Iteration (TVI) algorithm. Our first technique organizes
+  states in memory so that those belonging to the same Strongly Connected
+  Component (SCC) are contiguous, while our second technique optimizes state
+  value propagation by reordering states within each SCC. We analyze existing
+  planning algorithms with respect to their cache efficiency and describe domain
+  characteristics which can provide an advantage to each of them. Empirical
+  results show that, in many instances, our new algorithms, called eTVI and
+  eiTVI, run several times faster than traditional VI, TVI, LRTDP and ILAO*
+  techniques.
 
 # Links
 url_pdf: ''

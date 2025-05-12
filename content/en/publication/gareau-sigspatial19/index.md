@@ -24,24 +24,25 @@ doi: '10.1145/3347146.3359064'
 publication_types:
 - paper-conference
 
-abstract: 'In the last few years, several studies have considered different
-variants of the Electric Vehicle Journey Planning (EVJP) problem that consists
-in finding the shortest path (according to time) between two given points,
-passing by several charging stations and respecting the range of the vehicle.
-The total time taken by the vehicle is the sum of the driving time, the charging
-time and the waiting time. Unfortunately, the consideration of the waiting time
-has been neglected by previous studies. This study aims to fill this gap by
-introducing: (1) a graph relabeling technique using a probabilistic model of
-charging station occupancy generated using real EV stations data; (2) an
-alternative paths generation technique which accounts for worse than expected
-waiting time at various charging stations. Our empirical results indicate that
-the a priori consideration of charging station occupancy by graph relabeling
-can reduce the waiting time by more than 75%, while having a negligible impact
-on the driving time, and that the generation of alternative paths helps reduce
-the waiting (and total) time even more. For our public station network dataset
-and the current station occupancy (for now quite low), the mean total journey
-time (computed over 1000 requests) decreased by 17.3 minutes when our new
-technique was used.'
+abstract: |
+  In the last few years, several studies have considered different variants of
+  the Electric Vehicle Journey Planning (EVJP) problem that consists in finding
+  the shortest path (according to time) between two given points, passing by
+  several charging stations and respecting the range of the vehicle. The total
+  time taken by the vehicle is the sum of the driving time, the charging time
+  and the waiting time. Unfortunately, the consideration of the waiting time has
+  been neglected by previous studies. This study aims to fill this gap by
+  introducing: (1) a graph relabeling technique using a probabilistic model of
+  charging station occupancy generated using real EV stations data; (2) an
+  alternative paths generation technique which accounts for worse than expected
+  waiting time at various charging stations. Our empirical results indicate that
+  the a priori consideration of charging station occupancy by graph relabeling
+  can reduce the waiting time by more than 75%, while having a negligible impact
+  on the driving time, and that the generation of alternative paths helps reduce
+  the waiting (and total) time even more. For our public station network dataset
+  and the current station occupancy (for now quite low), the mean total journey
+  time (computed over 1000 requests) decreased by 17.3 minutes when our new
+  technique was used.
 
 # Links
 url_pdf: ''

@@ -25,17 +25,18 @@ publication_types:
 - paper-conference
 
 summary: ''
-abstract: 'Markov Decision Processes (MDPs) are often used in Artificial
-Intelligence to solve probabilistic sequential decision-making problems. In the
-last decades, many probabilistic planning algorithms have been developed to
-solve MDPs. However, the lack of standardized benchmarks makes it difficult to
-compare the performance of these algorithms in different contexts. In this
-paper, we identify important topological properties of MDPs that can make a
-significant impact on the relative performance of probabilistic planning
-algorithms. We also propose a new approach to generate synthetic MDP domains
-having different topological properties. This approach relies on the connection
-between MDPs and graphs and allows every graph generation technique to be used
-to generate synthetic MDP domains.'
+abstract: |
+  Markov Decision Processes (MDPs) are often used in Artificial Intelligence to
+  solve probabilistic sequential decision-making problems. In the last decades,
+  many probabilistic planning algorithms have been developed to solve MDPs.
+  However, the lack of standardized benchmarks makes it difficult to compare the
+  performance of these algorithms in different contexts. In this paper, we
+  identify important topological properties of MDPs that can make a significant
+  impact on the relative performance of probabilistic planning algorithms. We
+  also propose a new approach to generate synthetic MDP domains having different
+  topological properties. This approach relies on the connection between MDPs
+  and graphs and allows every graph generation technique to be used to generate
+  synthetic MDP domains.
 
 # Links
 url_pdf: ''

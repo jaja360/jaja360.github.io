@@ -26,28 +26,29 @@ publication_types:
 - paper-conference
 
 summary: ''
-abstract: "This paper introduces the Cooperative Electric Vehicles Planning
-Problem (CEVPP), which consists in finding a path for each vehicle of a fleet of
-electric vehicles, such that the global plan execution time (including travel
-time, charging time and waiting time) is minimal (e.g., by limiting the number
-of vehicles who need to charge simultaneously at the same charging station,
-which leads to waiting time). We show that the strategy which consists in
-planning each possible permutation of EVs and keeping the one providing the best
-solution is not only time intractable, but also not optimal. We propose
-different centralized planning algorithms to solve CEVPP instances: (1) a
-baseline non-cooperative CEVPP planner, (2) an optimal cooperative planner that
-finds a solution inside a carefully designed state space, and (3) multiple
-variants of an approximate cooperative planner based on the Cooperative-A*
-algorithm. We compare the solutions' quality and computation times obtained by
-these CEVPP planners. Our empirical results show that our best approximate
-cooperative EV planner found solutions with a reasonably small computational
-overhead compared to the baseline algorithm. The solutions found by our
-cooperative planners had significantly lower plan execution time globally,
-including travel time, waiting time and charging time, than the solution found
-by our baseline non-cooperative planner. On average, our empirical results show
-that our cooperative algorithms decreased the global (including each EVs)
-waiting time by more than 90%, while having a negligible impact on the charging
-and driving time."
+abstract: |
+  This paper introduces the Cooperative Electric Vehicles Planning Problem
+  (CEVPP), which consists in finding a path for each vehicle of a fleet of
+  electric vehicles, such that the global plan execution time (including travel
+  time, charging time and waiting time) is minimal (e.g., by limiting the number
+  of vehicles who need to charge simultaneously at the same charging station,
+  which leads to waiting time). We show that the strategy which consists in
+  planning each possible permutation of EVs and keeping the one providing the
+  best solution is not only time intractable, but also not optimal. We propose
+  different centralized planning algorithms to solve CEVPP instances: (1) a
+  baseline non-cooperative CEVPP planner, (2) an optimal cooperative planner
+  that finds a solution inside a carefully designed state space, and (3)
+  multiple variants of an approximate cooperative planner based on the
+  Cooperative-A* algorithm. We compare the solutions' quality and computation
+  times obtained by these CEVPP planners. Our empirical results show that our
+  best approximate cooperative EV planner found solutions with a reasonably
+  small computational overhead compared to the baseline algorithm. The solutions
+  found by our cooperative planners had significantly lower plan execution time
+  globally, including travel time, waiting time and charging time, than the
+  solution found by our baseline non-cooperative planner. On average, our
+  empirical results show that our cooperative algorithms decreased the global
+  (including each EVs) waiting time by more than 90%, while having a negligible
+  impact on the charging and driving time.
 
 # Links
 url_pdf: ''

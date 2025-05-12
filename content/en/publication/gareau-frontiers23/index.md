@@ -24,7 +24,23 @@ publication_types:
 - article-journal
 
 summary: ''
-abstract: 'This paper introduces an optimal algorithm for solving the discrete grid-based coverage path planning (CPP) problem. This problem consists in finding a path that covers a given region completely. First, we propose a CPP-solving baseline algorithm based on the iterative deepening depth-first search (ID-DFS) approach. Then, we introduce two branch-and-bound strategies (Loop detection and an Admissible heuristic function) to improve the results of our baseline algorithm. We evaluate the performance of our planner using six types of benchmark grids considered in this study: Coast-like, Random links, Random walk, Simple-shapes, Labyrinth and Wide-Labyrinth grids. We are first to consider these types of grids in the context of CPP. All of them find their practical applications in real-world CPP problems from a variety of fields. The obtained results suggest that the proposed branch-and-bound algorithm solves the problem optimally (i.e., the exact solution is found in each case) orders of magnitude faster than an exhaustive search CPP planner. To the best of our knowledge, no general CPP-solving exact algorithms, apart from an exhaustive search planner, have been proposed in the literature.'
+abstract: |
+  This paper introduces an optimal algorithm for solving the discrete grid-based
+  coverage path planning (CPP) problem. This problem consists in finding a path
+  that covers a given region completely. First, we propose a CPP-solving
+  baseline algorithm based on the iterative deepening depth-first search
+  (ID-DFS) approach. Then, we introduce two branch-and-bound strategies (Loop
+  detection and an Admissible heuristic function) to improve the results of our
+  baseline algorithm. We evaluate the performance of our planner using six
+  types of benchmark grids considered in this study: Coast-like, Random links,
+  Random walk, Simple-shapes, Labyrinth and Wide-Labyrinth grids. We are first
+  to consider these types of grids in the context of CPP. All of them find their
+  practical applications in real-world CPP problems from a variety of fields.
+  The obtained results suggest that the proposed branch-and-bound algorithm
+  solves the problem optimally (i.e., the exact solution is found in each case)
+  orders of magnitude faster than an exhaustive search CPP planner. To the best
+  of our knowledge, no general CPP-solving exact algorithms, apart from an
+  exhaustive search planner, have been proposed in the literature.
 
 # Links
 url_pdf: ''

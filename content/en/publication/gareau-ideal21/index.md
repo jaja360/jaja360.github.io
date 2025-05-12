@@ -24,15 +24,16 @@ publication_types:
 - paper-conference
 
 summary: ''
-abstract: 'This paper introduces a new algorithm for solving the discrete
-grid-based coverage path-planning (CPP) problem. This problem consists in
-finding a path that covers a given region completely. Our algorithm is based on
-an iterative deepening depth-first search. We introduce two branch-and-bound
-improvements (Loop detection and Admissible heuristic) to this algorithm. We
-evaluate the performance of our planner using four types of generated grids. The
-obtained results show that the proposed branch-and-bound algorithm solves the
-problem optimally and orders of magnitude faster than traditional optimal CPP
-planners.'
+abstract: |
+  This paper introduces a new algorithm for solving the discrete grid-based
+  coverage path-planning (CPP) problem. This problem consists in finding a path
+  that covers a given region completely. Our algorithm is based on an iterative
+  deepening depth-first search. We introduce two branch-and-bound improvements
+  (Loop detection and Admissible heuristic) to this algorithm. We evaluate the
+  performance of our planner using four types of generated grids. The obtained
+  results show that the proposed branch-and-bound algorithm solves the problem
+  optimally and orders of magnitude faster than traditional optimal CPP
+  planners.
 
 # Links
 url_pdf: ''

@@ -25,18 +25,19 @@ publication_types:
 - paper-conference
 
 summary: ''
-abstract: 'Markov Decision Processes (MDPs) are useful to solve real-world
-probabilistic planning problems. However, finding an optimal solution in an MDP
-can take an unreasonable amount of time when the number of states in the MDP is
-large. In this paper, we present a way to decompose an MDP into Strongly
-Connected Components (SCCs) and to find dependency chains for these SCCs. We
-then propose a variant of the Topological Value Iteration (TVI) algorithm,
-called parallel chained TVI (pcTVI), which is able to solve independent chains
-of SCCs in parallel leveraging modern multicore computer architectures. The
-performance of our algorithm was measured by comparing it to the baseline TVI
-algorithm on a new probabilistic planning domain introduced in this study. Our
-pcTVI algorithm led to a speedup factor of 20, compared to traditional TVI (on a
-computer having 32 cores).'
+abstract: |
+  Markov Decision Processes (MDPs) are useful to solve real-world probabilistic
+  planning problems. However, finding an optimal solution in an MDP can take an
+  unreasonable amount of time when the number of states in the MDP is large. In
+  this paper, we present a way to decompose an MDP into Strongly Connected
+  Components (SCCs) and to find dependency chains for these SCCs. We then
+  propose a variant of the Topological Value Iteration (TVI) algorithm, called
+  parallel chained TVI (pcTVI), which is able to solve independent chains of
+  SCCs in parallel leveraging modern multicore computer architectures. The
+  performance of our algorithm was measured by comparing it to the baseline TVI
+  algorithm on a new probabilistic planning domain introduced in this study. Our
+  pcTVI algorithm led to a speedup factor of 20, compared to traditional TVI (on
+  a computer having 32 cores).
 
 # Links
 url_pdf: ''
