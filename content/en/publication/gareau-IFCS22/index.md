@@ -40,7 +40,7 @@ abstract: |
   a computer having 32 cores).
 
 # Links
-url_pdf: ''
+url_pdf: 'https://link.springer.com/content/pdf/10.1007/978-3-031-09034-9_12.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''

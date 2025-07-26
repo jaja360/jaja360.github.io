@@ -44,7 +44,7 @@ abstract: |
   of the optimal plans, while keeping low the global plan execution time.
 
 # Links
-url_pdf: ''
+url_pdf: 'https://openreview.net/pdf?id=vtWg28K6Lu'
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -52,6 +52,12 @@ url_project: ''
 url_slides: 'slides.pdf'
 url_source: ''
 url_video: ''
+
+links:
+  - name: OpenReview Page
+    url: https://openreview.net/forum?id=vtWg28K6Lu
+    icon_pack: fas
+    icon: external-link-alt
 
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:

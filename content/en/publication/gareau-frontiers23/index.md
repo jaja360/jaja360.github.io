@@ -43,7 +43,7 @@ abstract: |
   exhaustive search planner, have been proposed in the literature.
 
 # Links
-url_pdf: ''
+url_pdf: 'https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2022.1076897/pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''

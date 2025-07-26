@@ -31,4 +31,4 @@ links:
 
 <!-- | #    | Date     | Contenu               | Lectures            | -->
 <!-- | ---: | :---:    | :---                  | :---                | -->
-<!-- | 1    | 30 avril | [Présentation du cours]({{< relref "/slides/intro" >}}) | [Beaudry] Section 1 | -->
+<!-- | 1    | 30 avril | [Présentation du cours]({{< relref "/slides/registres" >}}) | [Beaudry] Section 1 | -->

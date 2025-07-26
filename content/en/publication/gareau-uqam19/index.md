@@ -52,7 +52,7 @@ abstract: |
   recharges au Québec.
 
 # Links
-url_pdf: 'https://archipel.uqam.ca/13780'
+url_pdf: 'https://archipel.uqam.ca/13780/1/M16486.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: 'poster.pdf'
@@ -60,6 +60,12 @@ url_project: ''
 url_slides: 'slides.pdf'
 url_source: ''
 url_video: ''
+
+links:
+  - name: Archipel
+    url: https://archipel.uqam.ca/13780
+    icon_pack: fas
+    icon: external-link-alt
 
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:

@@ -96,7 +96,7 @@ abstract: |
   propriétés topologiques.
 
 # Links
-url_pdf: 'https://archipel.uqam.ca/18692/'
+url_pdf: 'https://archipel.uqam.ca/18692/1/D4822.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -104,6 +104,12 @@ url_project: ''
 url_slides: 'slides.pdf'
 url_source: ''
 url_video: ''
+
+links:
+  - name: Archipel
+    url: https://archipel.uqam.ca/18692
+    icon_pack: fas
+    icon: external-link-alt
 
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:

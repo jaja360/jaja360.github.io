@@ -51,7 +51,7 @@ abstract: |
   impact on the charging and driving time.
 
 # Links
-url_pdf: ''
+url_pdf: 'https://www.ifaamas.org/Proceedings/aamas2024/pdfs/p290.pdf'
 url_code: 'code.zip'
 url_dataset: ''
 url_poster: 'poster.pdf'
@@ -59,6 +59,12 @@ url_project: ''
 url_slides: 'slides.pdf'
 url_source: ''
 url_video: ''
+
+links:
+  - name: ACM Page
+    url: https://dl.acm.org/doi/abs/10.5555/3635637.3662877
+    icon_pack: fas
+    icon: external-link-alt
 
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:
