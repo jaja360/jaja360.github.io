@@ -25,16 +25,19 @@ publication_types:
 summary: ''
 abstract: |
   When sharing or logging numerical data, we must convert binary floating-point
-  numbers into their decimal string representations. For example, $\pi$ as a
-  32-bit number becomes 3.1415927. Engineers have perfected many algorithms for
-  producing such accurate, short strings. To our knowledge, no up-to-date
-  comparison of these methods has appeared in the literature. We present an
-  empirical comparison. Cutting-edge techniques like Schubfach and Dragonbox
-  achieve up to a tenfold speedup over Steele and White's Dragon4. Maybe
-  surprisingly, none of the implementations we surveyed consistently produced
-  the shortest possible string. We find that standard library implementations in
-  languages such as C++ and Swift can execute up to 50% more instructions than
-  the fastest methods.
+  numbers into their decimal string representations. For example, the number $\pi$
+  might become 3.1415927. Engineers have perfected many algorithms for producing
+  such accurate, short strings. We present an empirical comparison across
+  diverse hardware architectures and datasets. Cutting-edge techniques like
+  Schubfach and Dragonbox achieve up to a tenfold speedup over Steele and
+  White’s Dragon4, executing as few as 210 instructions per conversion compared
+  to Dragon4’s 1500–5000 instructions. Maybe surprisingly, none of the
+  implementations we surveyed consistently produced the shortest possible
+  strings—some generate outputs up to 30% longer than optimal. We find that
+  standard library implementations in languages such as C++ and Swift execute
+  significantly more instructions than the fastest methods, with performance
+  gaps varying across CPU architectures and compilers. We suggest some
+  optimization targets for future research.
 
 # Links
 url_pdf: ''
