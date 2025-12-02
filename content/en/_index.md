@@ -1,81 +1,70 @@
 ---
+# Leave the homepage title empty to use the site title
 title: ''
-date: 2024-02-28
+date: 2025-12-01
 type: landing
 
+design:
+  spacing: '6rem'
+
 sections:
-  - block: about.biography
-    id: about
+  - block: resume-biography-3
     content:
-      title: Biography
+      # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
-
-  - block: portfolio
-    id: courses
+      text: ''
+      button:
+        text: Download CV
+        url: uploads/resume.pdf
+      headings:
+        about: ''
+        education: ''
+        interests: ''
     design:
-      columns: '2'
-      view: compact
-    content:
-      title: Teaching
-      filters:
-        folders:
-          - courses
-
-  - block: portfolio
+      background:
+        gradient_mesh:
+          enable: true
+      avatar:
+        size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
+        shape: circle # Options: circle (default), square, rounded
+  - block: collection
     id: projects
-    design:
-      columns: '1'
-      view: showcase
-      flip_alt_rows: true
     content:
       title: Projects
       filters:
         folders:
-          - project
-
+          - projects
+    design:
+      # view: showcase
+      # flip_alt_rows: true
+      # columns: '1'
+      view: article-grid
+      fill_image: false
+      columns: 3
+      show_date: false
+      show_read_time: false
+      show_read_more: false
   - block: collection
     id: publications
-    design:
-      columns: '2'
-      view: citation
     content:
       title: Recent Publications
+      count: 10
+      text: ''
       filters:
         folders:
-          - publication
-        exclude_featured: true
-
-  - block: contact
-    id: contact
+          - publications
     design:
-      columns: '2'
+      view: citation
+  - block: collection
+    id: blog
     content:
-      title: Contact
-      email: champagne_gareau.jael@uqam.ca
-      phone: (514) 826-3867
-      # appointment_url: 'https://calendly.com'
-      address:
-        street: 201, Avenue du Président-Kennedy, PK-4285
-        city: Montréal
-        region: QC
-        postcode: 'H2X 3Y7'
-        country: Canada
-        country_code: CA
-      # directions:
-      # office_hours:
-      #  - 'Monday 10:00 to 13:00'
-      coordinates:
-        latitude: '45.509249'
-        longitude: '-73.568511'
-      contact_links:
-        - icon: twitter
-          icon_pack: fab
-          name: DM Me
-          link: 'https://twitter.com/jaja360'
-      autolink: true
-      form:
-        provider: formspree
-        formspree:
-          id: mbjnypoa
+      title: Recent Blog Posts
+      page_type: blog
+      count: 10
+      order: desc
+    design:
+      view: card
+      spacing:
+        padding: [0, 0, 0, 0]
 
 ---

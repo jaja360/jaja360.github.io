@@ -1,5 +1,4 @@
 ---
-
 title: "INF4170: Table d'alias des registres"
 summary: "Introduction à la table d'alias des registres"
 authors: []

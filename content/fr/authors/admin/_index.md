@@ -9,6 +9,9 @@ name_pronunciation: ''
 first_name: Jaël
 last_name: Champagne Gareau
 
+# Pronouns (optional)
+pronouns:
+
 # Status emoji
 status:
   icon: 💾
@@ -16,72 +19,118 @@ status:
 # Is this the primary user of the site?
 superuser: true
 
+# Highlight the author in author lists? (true/false)
+highlight_name: true
+
 # Role/position/tagline
 role: Chercheur postdoctoral en informatique
 
-# Organizations/Affiliations to show in About widget
+# Organizations/Affiliations to display in Biography blox
 organizations:
   - name: Université TÉLUQ
     url: https://teluq.ca/
 
-# Short bio (displayed in user profile at end of posts)
-bio: Mes intérêts de recherche incluent l'intelligence artificielle et l'exploitation de l'architecture moderne des ordinateurs lors de la conception et de l'implémentation d'algorithmes et de structures de données.
+# Social network links
+# Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
+profiles:
+  - icon: at-symbol
+    url: 'mailto:champagne_gareau.jael@courrier.uqam.ca'
+    label: E-mail Me
+  - icon: brands/x
+    url: https://x.com/jaja360
+  - icon: brands/github
+    url: https://github.com/jaja360
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/jaja360
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=eI9dpGUAAAAJ
+  - icon: academicons/orcid
+    url: https://orcid.org/0000-0002-1906-4157
 
-# Interests to show in About widget
 interests:
   - Intelligence artificielle
   - Planification automatique
   - Structures de données et algorithmes
   - Programmation haute-performance
+  - Conversion de nombres en chaînes de caractères
 
-# Education to show in About widget
 education:
-  courses:
-  - course: Études postdoctorales en informatique
+  - area: Recherche postdoctorale en informatique
     institution: Université TÉLUQ
-    year: 2025
-  - course: Doctorat en informatique
+    icon: ""
+    date_start: 2025-01-01
+    date_end: ''
+  - area: Doctorat en informatique (IA)
     institution: Université du Québec à Montréal
-    year: 2024
-  - course: Maîtrise en informatique
+    icon: ""
+    date_start: 2019-09-01
+    date_end: 2024-12-30
+  - area: Maîtrise en informatique (IA)
     institution: Université du Québec à Montréal
-    year: 2019
-  - course: Certificat en développement logiciel
+    icon: ""
+    date_start: 2017-09-01
+    date_end: 2019-08-31
+  - area: Certificat avancé en développement logiciel
     institution: Université du Québec à Montréal
-    year: 2017
-  - course: Baccalauréat en mathématiques fondamentales
+    icon: ""
+    date_start: 2016-09-01
+    date_end: 2017-05-31
+  - area: Baccalauréat en mathématiques fondamentales
     institution: Université du Québec à Montréal
-    year: 2016
+    icon: ""
+    date_start: 2013-09-01
+    date_end: 2016-08-31
 
-# Social/Academic Networking
-# For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
-#   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
-#   form "mailto:your-email@example.com" or "/#contact" for contact widget.
-social:
-- icon: envelope
-  icon_pack: fas
-  link: '/#contact'
-- icon: graduation-cap  # Alternatively, use `google-scholar` icon from `ai` icon pack
-  icon_pack: fas
-  link: https://scholar.google.com/citations?user=eI9dpGUAAAAJ
-- icon: orcid
-  icon_pack: ai
-  link: https://orcid.org/0000-0002-1906-4157
-- icon: github
-  icon_pack: fab
-  link: https://github.com/jaja360
-- icon: gitlab
-  icon_pack: fab
-  link: https://gitlab.com/jaja360
-- icon: linkedin
-  icon_pack: fab
-  link: https://linkedin.com/jaja360
-- icon: cv
-  icon_pack: ai
-  link: uploads/cv.pdf
+# work:
+#   - position: Senior AI Research Scientist
+#     company_name: Meta AI
+#     company_url: 'https://ai.meta.com/'
+#     icon: ''
+#     date_start: 2020-01-01
+#     date_end: ''
+#     summary: |2-
+#       Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models. 50+ citations in 3 years.
 
-# Highlight the author in author lists? (true/false)
-highlight_name: true
+# Skills
+# Add your own SVG icons to `assets/media/icons/`
+# skills:
+#   - name: Technical Skills
+#     items:
+#       - name: Python & PyTorch
+#         description: ''
+#         percent: 95
+#         icon: code-bracket
+#   - name: Hobbies
+#     color: '#eeac02'
+#     color_border: '#f0bf23'
+#     items:
+#       - name: Building Custom PCs
+#         description: ''
+#         percent: 90
+#         icon: cpu-chip
+#       - name: Sci-Fi Reading
+#         description: ''
+#         percent: 70
+#         icon: book-open
+
+languages:
+  - name: Français
+    percent: 100
+  - name: Anglais
+    percent: 100
+
+# Awards.
+#   Add/remove as many awards below as you like.
+#   Only `title`, `awarder`, and `date` are required.
+#   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
+# awards:
+#   - title: Best Paper Award
+#     url: https://neurips.cc/
+#     date: '2022-12-01'
+#     awarder: NeurIPS
+#     icon: hero/trophy
+#     summary: |
+#       Awarded for groundbreaking work on efficient training of large models.
 
 ---
 
@@ -94,5 +143,3 @@ processus décisionnels de Markov (MDP). Durant ma maîtrise, j’ai développé
 algorithmes de planification d’itinéraires pour véhicules électriques, visant à
 déterminer le chemin optimal entre deux points tout en minimisant le temps total
 du trajet (incluant le temps de déplacement, la recharge et l’attente aux bornes).
-
-{{< icon name="download" pack="fas" >}} Téléchargez mon {{< staticref "fr/uploads/cv.pdf">}}CV{{< /staticref >}}.

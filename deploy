@@ -1,14 +1,9 @@
 #!/usr/bin/env bash
 
-# Update plugins
-hugo mod get -u ./...
-
-# Clean go.sum
-hugo mod tidy
-
 # Compile
 rm -rf public
 hugo --gc --minify
+pnpm dlx pagefind --site "public"
 
 # Send to server
-rsync -avz --delete public/ jgareau@192.168.0.10:~/site
+# rsync -avz --delete public/ jgareau@192.168.0.10:~/site

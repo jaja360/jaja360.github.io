@@ -1,11 +1,9 @@
-module github.com/HugoBlox/theme-academic-cv
+module github.com/HugoBlox/hugo-blox-builder/templates/academic-cv
 
-go 1.24
+go 1.19
 
 require (
-	github.com/HugoBlox/hugo-blox-builder/modules/blox-seo v0.2.3
-	github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5 v5.9.7 // indirect
-	github.com/HugoBlox/hugo-blox-builder/modules/blox-core v0.3.1 // indirect
-	github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify v1.1.1 // indirect
-	github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-reveal v1.1.2 // indirect
+	github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify v1.2.1-0.20251201153614-630d1fd6f5dc
+	github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind v0.10.1-0.20251201153614-630d1fd6f5dc
+	github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-reveal v1.2.4
 )
