@@ -1,32 +1,32 @@
 ---
-# Documentation: https://docs.hugoblox.com/reference/content-types/#publications
-
-title: Fast and Optimal Planner for the Discrete Grid-Based Coverage Path-Planning Problem
-subtitle: ''
+title: Fast and Optimal Planner for the Discrete Grid-Based Coverage
+  Path-Planning Problem
+subtitle: ""
 authors:
-- admin
-- Éric Beaudry
-- Vladimir Makarenkov
-tags: [Coverage Path Planning, Deterministic Planning, Heuristic, Branch and Bound]
+  - me
+  - Éric Beaudry
+  - Vladimir Makarenkov
+tags:
+  - Coverage Path Planning
+  - Deterministic Planning
+  - Heuristic
+  - Branch and Bound
 categories: []
-projects: [CPP]
-date: '2021-01-01'
+projects:
+  - CPP
+date: 2021-01-01
 lastmod: 2022-04-16T16:44:02-04:00
-publishDate: '2022-04-16T20:44:02.465563Z'
+publishDate: 2022-04-16T20:44:02.465563Z
 featured: false
 draft: false
-
 publication_types:
   - paper-conference
-
-publication: 'Intelligent Data Engineering and Automated Learning'
-publication_short: 'IDEAL 2021'
-
+publication: Intelligent Data Engineering and Automated Learning
+publication_short: IDEAL 2021
 hugoblox:
   ids:
-    doi: '10.1007/978-3-030-91608-4_9'
-
-summary: ''
+    doi: 10.1007/978-3-030-91608-4_9
+summary: ""
 abstract: |
   This paper introduces a new algorithm for solving the discrete grid-based
   coverage path-planning (CPP) problem. This problem consists in finding a path
@@ -37,15 +37,12 @@ abstract: |
   results show that the proposed branch-and-bound algorithm solves the problem
   optimally and orders of magnitude faster than traditional optimal CPP
   planners.
-
 links:
   - type: slides
-    url: 'slides.pdf'
-
-# To use, add an image named `featured.jpg/png` to your page's folder.
+    url: slides.pdf
 image:
-  caption: ''
-  focal_point: 'Smart'
+  caption: ""
+  focal_point: Smart
   preview_only: false
-
 ---
+

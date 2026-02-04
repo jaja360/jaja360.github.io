@@ -1,32 +1,31 @@
 ---
-# Documentation: https://docs.hugoblox.com/reference/content-types/#publications
-
 title: Fast and optimal branch-and-bound planner for the grid-based coverage path planning problem based on an admissible heuristic function
-subtitle: ''
+subtitle: ""
 authors:
-- admin
-- Éric Beaudry
-- Vladimir Makarenkov
+  - me
+  - Éric Beaudry
+  - Vladimir Makarenkov
 author_notes: []
-tags: [Coverage Path Planning, Deterministic Planning, Heuristic, Branch and Bound]
+tags:
+  - Coverage Path Planning
+  - Deterministic Planning
+  - Heuristic
+  - Branch and Bound
 categories: []
-projects: [CPP]
-date: '2023-01-27'
-lastmod: '2023-01-16T16:44:02-04:00'
-publishDate: '2023-01-16T16:44:02-04:00'
+projects:
+  - CPP
+date: 2023-01-27
+lastmod: 2023-01-16T16:44:02-04:00
+publishDate: 2023-01-16T16:44:02-04:00
 featured: false
 draft: false
-
 publication_types:
   - article-journal
-
-publication: 'Frontiers in Robotics and AI'
-
+publication: Frontiers in Robotics and AI
 hugoblox:
   ids:
-    doi: '10.3389/frobt.2022.1076897'
-
-summary: ''
+    doi: 10.3389/frobt.2022.1076897
+summary: ""
 abstract: |
   This paper introduces an optimal algorithm for solving the discrete grid-based
   coverage path planning (CPP) problem. This problem consists in finding a path
@@ -44,15 +43,12 @@ abstract: |
   orders of magnitude faster than an exhaustive search CPP planner. To the best
   of our knowledge, no general CPP-solving exact algorithms, apart from an
   exhaustive search planner, have been proposed in the literature.
-
 links:
   - type: pdf
-    url: 'https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2022.1076897/pdf'
-
-# To use, add an image named `featured.jpg/png` to your page's folder.
+    url: https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2022.1076897/pdf
 image:
-  caption: ''
-  focal_point: 'Smart'
+  caption: ""
+  focal_point: Smart
   preview_only: false
-
 ---
+

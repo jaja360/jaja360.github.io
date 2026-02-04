@@ -1,35 +1,34 @@
 ---
-# Documentation: https://docs.hugoblox.com/reference/content-types/#publications
-
-title: 'Increased Plan Stability in Cooperative Electric Vehicles Path-Planning'
-subtitle: ''
+title: Increased Plan Stability in Cooperative Electric Vehicles Path-Planning
+subtitle: ""
 authors:
-- admin
-- Guillaume Gosset
-- Marc-André Lavoie
-- Éric Beaudry
-- Vladimir Makarenkov
+  - me
+  - Guillaume Gosset
+  - Marc-André Lavoie
+  - Éric Beaudry
+  - Vladimir Makarenkov
 author_notes: []
-tags: [Electric Vehicles, Cooperative, Multi-Agent, Contingency Planning, Deterministic Planning, Human-Aware, Plan Stability]
+tags:
+  - Electric Vehicles
+  - Cooperative
+  - Multi-Agent
+  - Contingency Planning
+  - Deterministic Planning
+  - Human-Aware
+  - Plan Stability
 categories: []
-projects: [veplan]
-date: '2024-06-03'
-lastmod: '2024-03-15T22:51:00-00:00'
-publishDate: '2024-03-15T22:51:00-00:00'
+projects:
+  - veplan
+date: 2024-06-03
+lastmod: 2024-03-15T22:51:00-00:00
+publishDate: 2024-03-15T22:51:00-00:00
 featured: false
 draft: false
-
 publication_types:
   - paper-conference
-
-publication: 'Human-Aware and Explainable Planning Workshop (HAXP) at ICAPS 2024'
-publication_short: "ICAPS'24 HAXP Workshop"
-
-# hugoblox:
-#   ids:
-#     doi: ''
-
-summary: ''
+publication: Human-Aware and Explainable Planning Workshop (HAXP) at ICAPS 2024
+publication_short: ICAPS'24 HAXP Workshop
+summary: ""
 abstract: |
   The Cooperative Electric Vehicles Planning Problem (CEVPP) has recently been
   proposed as a multi-agent variant of the Electric Vehicle Path-Planning
@@ -45,19 +44,16 @@ abstract: |
   results of our experiments, conducted with real road networks and charging
   stations, indicate that our approach can significantly reduce the variability
   of the optimal plans, while keeping low the global plan execution time.
-
 links:
   - type: pdf
-    url: 'https://openreview.net/pdf?id=vtWg28K6Lu'
+    url: https://openreview.net/pdf?id=vtWg28K6Lu
   - type: slides
-    url: 'slides.pdf'
+    url: slides.pdf
   - name: OpenReview Page
     url: https://openreview.net/forum?id=vtWg28K6Lu
-
-# To use, add an image named `featured.jpg/png` to your page's folder.
 image:
-  caption: ''
-  focal_point: 'Smart'
+  caption: ""
+  focal_point: Smart
   preview_only: false
-
 ---
+

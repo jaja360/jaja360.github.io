@@ -1,33 +1,32 @@
 ---
-# Documentation: https://docs.hugoblox.com/reference/content-types/#publications
-
-title: 'Towards Topologically Diverse Probabilistic Planning Benchmarks'
-subtitle: 'Synthetic Domain Generation for Markov Decision Processes'
+title: Towards Topologically Diverse Probabilistic Planning Benchmarks
+subtitle: Synthetic Domain Generation for Markov Decision Processes
 authors:
-- admin
-- Éric Beaudry
-- Vladimir Makarenkov
+  - me
+  - Éric Beaudry
+  - Vladimir Makarenkov
 author_notes: []
-tags: [MDP, Probabilistic Planning, Benchmarks]
+tags:
+  - MDP
+  - Probabilistic Planning
+  - Benchmarks
 categories: []
-projects: [MDP]
-date: '2024-07-15'
-lastmod: '2024-07-15'
-publishDate: '2024-07-13'
+projects:
+  - MDP
+date: 2024-07-15
+lastmod: 2024-07-15
+publishDate: 2024-07-13
 featured: false
 draft: false
-
 publication_types:
   - paper-conference
-
-publication: 'Proceedings of the International Federation of Classification Societies Conference'
-publication_short: 'IFCS 2024'
-
+publication: Proceedings of the International Federation of Classification
+  Societies Conference
+publication_short: IFCS 2024
 hugoblox:
   ids:
-    doi: '10.1007/978-3-031-85870-3_7'
-
-summary: ''
+    doi: 10.1007/978-3-031-85870-3_7
+summary: ""
 abstract: |
   Markov Decision Processes (MDPs) are often used in Artificial Intelligence to
   solve probabilistic sequential decision-making problems. In the last decades,
@@ -40,17 +39,14 @@ abstract: |
   topological properties. This approach relies on the connection between MDPs
   and graphs and allows every graph generation technique to be used to generate
   synthetic MDP domains.
-
 links:
   - type: code
-    url: 'https://gitlab.info.uqam.ca/champagne_gareau.jael/graph-toolkit'
+    url: https://gitlab.info.uqam.ca/champagne_gareau.jael/graph-toolkit
   - type: slides
-    url: 'slides.pdf'
-
-# To use, add an image named `featured.jpg/png` to your page's folder.
+    url: slides.pdf
 image:
-  caption: ''
-  focal_point: 'Smart'
+  caption: ""
+  focal_point: Smart
   preview_only: false
-
 ---
+

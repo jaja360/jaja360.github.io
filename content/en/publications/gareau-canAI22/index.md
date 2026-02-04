@@ -1,33 +1,31 @@
 ---
-# Documentation: https://docs.hugoblox.com/reference/content-types/#publications
-
 title: Cache-Efficient Memory Representation of Markov Decision Processes
-subtitle: ''
+subtitle: ""
 authors:
-- admin
-- Éric Beaudry
-- Vladimir Makarenkov
+  - me
+  - Éric Beaudry
+  - Vladimir Makarenkov
 author_notes: []
-tags: [MDP, Cache Memory, Data Structures]
+tags:
+  - MDP
+  - Cache Memory
+  - Data Structures
 categories: []
-projects: [MDP]
-date: '2022-01-01'
+projects:
+  - MDP
+date: 2022-01-01
 lastmod: 2022-04-16T16:44:02-04:00
-publishDate: '2022-04-16T20:44:02.264969Z'
+publishDate: 2022-04-16T20:44:02.264969Z
 featured: false
 draft: false
-
 publication_types:
   - paper-conference
-
-publication: 'Proceedings of the Canadian Conference on Artificial Intelligence'
-publication_short: 'Canadian AI 2022'
-
+publication: Proceedings of the Canadian Conference on Artificial Intelligence
+publication_short: Canadian AI 2022
 hugoblox:
   ids:
-    doi: '10.21428/594757db.0e910d58'
-
-summary: ''
+    doi: 10.21428/594757db.0e910d58
+summary: ""
 abstract: |
   Research in automated planning typically focuses on the development of new or
   improved algorithms. Yet, an equally important but often overlooked topic is
@@ -41,15 +39,12 @@ abstract: |
   show that by using our CSR-MDP memory representation, existing MDP solvers,
   including VI, LRTDP and TVI, are able to find an optimal policy an order of
   magnitude faster.
-
 links:
   - type: slides
-    url: 'slides.pdf'
-
-# To use, add an image named `featured.jpg/png` to your page's folder.
+    url: slides.pdf
 image:
-  caption: ''
-  focal_point: 'Smart'
+  caption: ""
+  focal_point: Smart
   preview_only: false
-
 ---
+

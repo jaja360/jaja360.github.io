@@ -1,32 +1,31 @@
 ---
-# Documentation: https://docs.hugoblox.com/reference/content-types/#publications
-
 title: An Efficient Electric Vehicle Path-Planner That Considers the Waiting Time
-subtitle: ''
+subtitle: ""
 authors:
-- admin
-- Éric Beaudry
-- Vladimir Makarenkov
+  - me
+  - Éric Beaudry
+  - Vladimir Makarenkov
 author_notes: []
-tags: [Electric Vehicles, Contingency Planning, Deterministic Planning, Graph Relabeling]
+tags:
+  - Electric Vehicles
+  - Contingency Planning
+  - Deterministic Planning
+  - Graph Relabeling
 categories: []
-projects: [veplan]
-date: '2019-01-01'
+projects:
+  - veplan
+date: 2019-01-01
 lastmod: 2022-04-16T16:44:02-04:00
-publishDate: '2022-04-16T20:44:02.661609Z'
+publishDate: 2022-04-16T20:44:02.661609Z
 featured: false
 draft: false
-
 publication_types:
   - paper-conference
-
-publication: "Proceedings of the 27th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems"
-publication_short: "ACM SIGSPATIAL 2019"
-
+publication: Proceedings of the 27th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems
+publication_short: ACM SIGSPATIAL 2019
 hugoblox:
   ids:
-    doi: '10.1145/3347146.3359064'
-
+    doi: 10.1145/3347146.3359064
 abstract: |
   In the last few years, several studies have considered different variants of
   the Electric Vehicle Journey Planning (EVJP) problem that consists in finding
@@ -46,15 +45,12 @@ abstract: |
   and the current station occupancy (for now quite low), the mean total journey
   time (computed over 1000 requests) decreased by 17.3 minutes when our new
   technique was used.
-
 links:
   - type: slides
-    url: 'slides.pdf'
-
-# To use, add an image named `featured.jpg/png` to your page's folder.
+    url: slides.pdf
 image:
-  caption: 'An EV charging at a public station in Montréal'
-  focal_point: 'Smart'
+  caption: An EV charging at a public station in Montréal
+  focal_point: Smart
   preview_only: false
-
 ---
+

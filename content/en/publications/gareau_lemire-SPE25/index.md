@@ -1,31 +1,31 @@
 ---
-# Documentation: https://docs.hugoblox.com/reference/content-types/#publications
-
-title: 'Converting Binary Floating-Point Numbers to Shortest Decimal Strings: An Experimental Review'
-subtitle: ''
+title: "Converting Binary Floating-Point Numbers to Shortest Decimal Strings: An Experimental Review"
+subtitle: ""
 authors:
-- admin
-- Daniel Lemire
+  - me
+  - Daniel Lemire
 author_notes: []
-tags: [Floating-Point, Decimal, Binary, Shortest String, Conversion]
+tags:
+  - Floating-Point
+  - Decimal
+  - Binary
+  - Shortest String
+  - Conversion
 categories: []
-projects: [Float]
-date: '2026-01-29'
-lastmod: '2026-02-04T16:44:02-04:00'
-publishDate: '2025-07-19T16:44:02-04:00'
+projects:
+  - Float
+date: 2026-01-29
+lastmod: 2026-02-04T16:44:02-04:00
+publishDate: 2025-07-19T16:44:02-04:00
 featured: false
 draft: false
-
 publication_types:
   - article-journal
-
-publication: 'Software: Practice and Experience'
-
+publication: "Software: Practice and Experience"
 hugoblox:
   ids:
-    doi: '10.1002/spe.70056'
-
-summary: ''
+    doi: 10.1002/spe.70056
+summary: ""
 abstract: |
   When sharing or logging numerical data, we must convert binary floating-point
   numbers into their decimal string representations. For example, the number $\pi$
@@ -41,17 +41,14 @@ abstract: |
   significantly more instructions than the fastest methods, with performance
   gaps varying across CPU architectures and compilers. We suggest some
   optimization targets for future research.
-
 links:
   - type: code
-    url: 'https://github.com/fastfloat/float_serialization_benchmark'
+    url: https://github.com/fastfloat/float_serialization_benchmark
   - name: Benchmark Data
     url: results.zip
-
-# To use, add an image named `featured.jpg/png` to your page's folder.
 image:
-  caption: ''
-  focal_point: 'Smart'
+  caption: ""
+  focal_point: Smart
   preview_only: false
-
 ---
+

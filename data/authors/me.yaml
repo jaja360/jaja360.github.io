@@ -1,0 +1,77 @@
+schema: hugoblox/author/v1
+slug: me
+name:
+  display: Jaël Champagne Gareau
+  given: Jaël
+  family: Champagne Gareau
+is_owner: true
+status:
+  icon: "💾"
+role: Postdoctoral Researcher in Computer Science
+bio: |
+  I am currently a postdoctoral researcher in computer science at Université
+  TÉLUQ, where my research focuses on speeding up the conversion of floating-point
+  numbers into decimal strings. During my doctoral studies, I designed algorithms
+  and data structures that leverage modern computer architectures to solve large
+  instances of Markov decision processes (MDPs). In my master’s research, I
+  developed routing algorithms for electric vehicles aimed at determining the
+  optimal path between two points while minimizing travel time (including
+  driving, charging, and expected waiting time at charging stations).
+affiliations:
+  - name: Université TÉLUQ
+    url: https://teluq.ca/
+ids:
+  google_scholar: eI9dpGUAAAAJ
+  orcid: 0000-0002-1906-4157
+links:
+  - icon: at-symbol
+    url: mailto:champagne_gareau.jael@courrier.uqam.ca
+    label: E-mail Me
+  - icon: brands/x
+    url: https://x.com/jaja360
+  - icon: brands/github
+    url: https://github.com/jaja360
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/jaja360
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=eI9dpGUAAAAJ
+  - icon: academicons/orcid
+    url: https://orcid.org/0000-0002-1906-4157
+interests:
+  - Artificial Intelligence
+  - Automated Planning
+  - Data Structures and Algorithms
+  - High-Performance Computing
+  - Number to String Conversion Algorithms
+education:
+  - institution: Université TÉLUQ
+    degree: Postdoctoral Research in Computer Science
+    start: 2025-01-01
+    summary: Research on various aspects of numbers to string algorithms.
+  - institution: Université du Québec à Montréal
+    degree: PhD Computer Science (AI Focus)
+    start: 2019-09-01
+    end: 2024-12-30
+    summary: Research on algorithms and data structures for improving efficiency of probabilistic planning systems (Markov Decision Processes).
+  - institution: Université du Québec à Montréal
+    degree: MS Computer Science (AI Focus)
+    start: 2017-09-01
+    end: 2019-08-31
+    summary: Research on algorithms for electric vehicles path-planning problems.
+  - institution: Université du Québec à Montréal
+    degree: Certificate in software development
+    start: 2016-09-01
+    end: 2017-05-31
+  - institution: Université du Québec à Montréal
+    degree: BSc in Pure Mathematics
+    start: 2013-09-01
+    end: 2016-08-31
+languages:
+  - name: English
+    level: 5
+    percent: 100
+    label: Native
+  - name: French
+    level: 5
+    percent: 100
+    label: Native

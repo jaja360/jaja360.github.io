@@ -1,33 +1,32 @@
 ---
-# Documentation: https://docs.hugoblox.com/reference/content-types/#publications
-
 title: A Fast Electric Vehicle Path-Planner Using Clustering
-subtitle: ''
+subtitle: ""
 authors:
-- admin
-- Éric Beaudry
-- Vladimir Makarenkov
+  - me
+  - Éric Beaudry
+  - Vladimir Makarenkov
 author_notes: []
-tags: [Electric Vehicles, Deterministic Planning, Clustering]
+tags:
+  - Electric Vehicles
+  - Deterministic Planning
+  - Clustering
 categories: []
-projects: [VEPlan]
-date: '2021-01-01'
+projects:
+  - veplan
+date: 2021-01-01
 lastmod: 2022-04-16T16:44:02-04:00
-publishDate: '2022-04-16T20:44:02.761145Z'
+publishDate: 2022-04-16T20:44:02.761145Z
 featured: false
 draft: false
-
 publication_types:
   - paper-conference
-
-publication: 'Proceedings of the International Federation of Classification Societies Conference'
-publication_short: 'IFCS 2019'
-
+publication: Proceedings of the International Federation of Classification
+  Societies Conference
+publication_short: IFCS 2019
 hugoblox:
   ids:
-    doi: '10.1007/978-3-030-60104-1_3'
-
-summary: ''
+    doi: 10.1007/978-3-030-60104-1_3
+summary: ""
 abstract: |
   Over the past few years, several studies have considered the problem of
   Electric Vehicle Path Planning with intermediate recharge (EVPP-R) that
@@ -41,15 +40,12 @@ abstract: |
   number of stations considered by a factor of 13 and increase the speed of
   computation by a factor of 35, while having a very limited trade-off increase,
   of less than 1%, on the average journey duration time.
-
 links:
   - type: slides
-    url: 'slides.pdf'
-
-# To use, add an image named `featured.jpg/png` to your page's folder.
+    url: slides.pdf
 image:
-  caption: ''
-  focal_point: 'Smart'
+  caption: ""
+  focal_point: Smart
   preview_only: false
-
 ---
+

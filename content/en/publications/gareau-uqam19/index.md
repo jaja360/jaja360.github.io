@@ -1,26 +1,27 @@
 ---
-# Documentation: https://docs.hugoblox.com/reference/content-types/#publications
-
 title: Planification d'itinéraires pour véhicule électrique avec disponibilité incertaine des bornes de recharge
-subtitle: ''
+subtitle: ""
 authors:
-- admin
+  - me
 author_notes: []
-tags: [Electric Vehicles, Contingency Planning, Deterministic Planning, Graph Relabeling]
+tags:
+  - Electric Vehicles
+  - Contingency Planning
+  - Deterministic Planning
+  - Graph Relabeling
 categories: []
-projects: [veplan]
-date: '2019-12-01'
+projects:
+  - veplan
+date: 2019-12-01
 lastmod: 2022-07-16T19:44:02-04:00
-publishDate: '2022-04-16T20:44:02.661609Z'
+publishDate: 2022-04-16T20:44:02.661609Z
 featured: false
 draft: false
-
-publication: "Université du Québec à Montréal"
+publication: Université du Québec à Montréal
 publication_types:
   - thesis
 genre: Master
-
-summary: ''
+summary: ""
 abstract: |
   Un planificateur automatique étant capable de donner aisément et rapidement
   des itinéraires pour véhicule électrique s'avère nécessaire considérant le
@@ -49,21 +50,18 @@ abstract: |
   l'occupation des bornes et le temps espéré d'attente, qui a été généré à
   partir de données réelles du circuit électrique, le réseau public de bornes de
   recharges au Québec.
-
 links:
   - type: pdf
-    url: 'https://archipel.uqam.ca/13780/1/M16486.pdf'
+    url: https://archipel.uqam.ca/13780/1/M16486.pdf
   - type: slides
-    url: 'slides.pdf'
+    url: slides.pdf
   - type: poster
-    url: 'poster.pdf'
+    url: poster.pdf
   - name: Archipel
     url: https://archipel.uqam.ca/13780
-
-# To use, add an image named `featured.jpg/png` to your page's folder.
 image:
-  caption: ''
-  focal_point: 'Smart'
+  caption: ""
+  focal_point: Smart
   preview_only: false
-
 ---
+

@@ -1,34 +1,35 @@
 ---
-# Documentation: https://docs.hugoblox.com/reference/content-types/#publications
-
 title: Cooperative Electric Vehicles Planning
-subtitle: ''
+subtitle: ""
 authors:
-- admin
-- Marc-André Lavoie
-- Guillaume Gosset
-- Éric Beaudry
+  - me
+  - Marc-André Lavoie
+  - Guillaume Gosset
+  - Éric Beaudry
 author_notes: []
-tags: [Electric Vehicles, Cooperative, Multi-Agent, Contingency Planning, Deterministic Planning]
+tags:
+  - Electric Vehicles
+  - Cooperative
+  - Multi-Agent
+  - Contingency Planning
+  - Deterministic Planning
 categories: []
-projects: [veplan]
-date: '2024-05-09'
+projects:
+  - veplan
+date: 2024-05-09
 lastmod: 2024-04-26T16:44:02-04:00
-publishDate: '2024-04-26T20:44:02.264969Z'
+publishDate: 2024-04-26T20:44:02.264969Z
 featured: false
 draft: false
-
 publication_types:
   - paper-conference
-
-publication: 'Proceedings of the 23rd International Conference on Autonomous Agents and Multi-Agent Systems'
-publication_short: 'AAMAS 2024'
-
+publication: Proceedings of the 23rd International Conference on Autonomous
+  Agents and Multi-Agent Systems
+publication_short: AAMAS 2024
 # hugoblox:
 #   ids:
-#     doi: '10.5555/3635637.3662877'
-
-summary: ''
+#      doi: '10.5555/3635637.3662877'
+summary: ""
 abstract: |
   This paper introduces the Cooperative Electric Vehicles Planning Problem
   (CEVPP), which consists in finding a path for each vehicle of a fleet of
@@ -52,23 +53,20 @@ abstract: |
   empirical results show that our cooperative algorithms decreased the global
   (including each EVs) waiting time by more than 90%, while having a negligible
   impact on the charging and driving time.
-
 links:
   - type: pdf
-    url: 'https://www.ifaamas.org/Proceedings/aamas2024/pdfs/p290.pdf'
+    url: https://www.ifaamas.org/Proceedings/aamas2024/pdfs/p290.pdf
   - type: code
-    url: 'code.zip'
+    url: code.zip
   - type: slides
-    url: 'slides.pdf'
+    url: slides.pdf
   - type: poster
-    url: 'poster.pdf'
+    url: poster.pdf
   - name: ACM Page
     url: https://dl.acm.org/doi/abs/10.5555/3635637.3662877
-
-# To use, add an image named `featured.jpg/png` to your page's folder.
 image:
-  caption: ''
-  focal_point: 'Smart'
+  caption: ""
+  focal_point: Smart
   preview_only: false
-
 ---
+

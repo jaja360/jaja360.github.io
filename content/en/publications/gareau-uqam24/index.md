@@ -1,26 +1,30 @@
 ---
-# Documentation: https://docs.hugoblox.com/reference/content-types/#publications
-
 title: Résolution efficace de processus décisionnels de Markov par l'exploitation d'approches structurelles et algorithmiques tirant parti de l'architecture moderne des ordinateurs
-subtitle: ''
+subtitle: ""
 authors:
-- admin
+  - me
 author_notes: []
-tags: [MDP, Probabilistic Planning, Parallelism, Data Structures, Cache Memory, Algorithms, Benchmarks]
+tags:
+  - MDP
+  - Probabilistic Planning
+  - Parallelism
+  - Data Structures
+  - Cache Memory
+  - Algorithms
+  - Benchmarks
 categories: []
-projects: [MDP]
-date: '2024-12-01'
+projects:
+  - MDP
+date: 2024-12-01
 lastmod: 2024-12-04T19:44:02-04:00
-publishDate: '2024-12-04T20:44:02.661609Z'
+publishDate: 2024-12-04T20:44:02.661609Z
 featured: false
 draft: false
-
-publication: "Université du Québec à Montréal"
+publication: Université du Québec à Montréal
 publication_types:
   - thesis
 genre: PhD
-
-summary: ''
+summary: ""
 abstract: |
   Cette thèse présente des contributions en planification automatique sous
   incertitude, un domaine de l'intelligence artificielle. Ce domaine s'intéresse
@@ -50,8 +54,8 @@ abstract: |
 
   Cette stratégie reste cependant quasi inédite en planification. Cette thèse
   présente des contributions visant à combler ce manque dans la littérature en
-  améliorant l'implémentation des algorithmes de planification de MDPs de sorte à
-  exploiter les caractéristiques des processeurs modernes.
+  améliorant l'implémentation des algorithmes de planification de MDPs de sorte
+  à exploiter les caractéristiques des processeurs modernes.
 
   La première contribution est une représentation mémoire, appelée CSR-MDP,
   indépendante du choix de l'algorithme de résolution utilisé pour trouver la
@@ -93,19 +97,16 @@ abstract: |
   une quatrième contribution est proposée: un algorithme de génération de PDM
   synthétiques, pouvant générer des instances couvrant un vaste éventail de
   propriétés topologiques.
-
 links:
   - type: pdf
-    url: 'https://archipel.uqam.ca/18692/1/D4822.pdf'
+    url: https://archipel.uqam.ca/18692/1/D4822.pdf
   - type: slides
-    url: 'slides.pdf'
+    url: slides.pdf
   - name: Archipel
     url: https://archipel.uqam.ca/18692
-
-# To use, add an image named `featured.jpg/png` to your page's folder.
 image:
-  caption: ''
-  focal_point: 'Smart'
+  caption: ""
+  focal_point: Smart
   preview_only: false
-
 ---
+
