@@ -12,7 +12,7 @@ categories: []
 projects: [MDP]
 date: '2025-05-12'
 lastmod: 2025-07-26T16:44:02-04:00
-publishDate: '2025-05-12T16:44:02.264969Z'
+publishDate: '2026-02-04T16:44:02.264969Z'
 featured: false
 draft: false
 
@@ -22,9 +22,9 @@ publication_types:
 publication: 'Proceedings of the Canadian Conference on Artificial Intelligence'
 publication_short: 'Canadian AI 2025'
 
-# hugoblox:
-#   ids:
-#     doi: ''
+hugoblox:
+  ids:
+    doi: '10.21428/594757db.f73769f4'
 
 summary: ''
 abstract: |
