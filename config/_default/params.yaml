@@ -72,7 +72,7 @@ hugoblox:
     # Border radius: 'none', 'sm', 'md', 'lg', or 'full'
     radius: "md"
     # Spacing density: 'compact', 'comfortable', or 'spacious'
-    spacing: "comfortable"
+    spacing: "compact"
     # Avatar shape in author profiles
     avatar_shape: circle                # circle | square | rounded
 
@@ -106,7 +106,7 @@ hugoblox:
   footer:
     # Footer style variant
     style: minimal                      # minimal | columns | centered
-    language_switcher: true
+    language_switcher: false
     # Custom footer text (HTML supported)
     text: ""
 
@@ -116,7 +116,7 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   copyright:
     # Copyright notice - supports {year}, {name}, {license} placeholders
-    notice: "© {year} {name}. This work is licensed under {license}"
+    notice: ""
     license:
       type: cc                          # cc | all_rights | custom
       allow_derivatives: false
@@ -163,7 +163,7 @@ hugoblox:
       enable: true
     # Reading time estimates
     reading_time:
-      enable: true
+      enable: false
     # Academic citations
     citations:
       style: apa                        # apa | mla | chicago | ieee

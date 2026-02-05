@@ -1,0 +1,23 @@
+- id: about_me
+  translation: Profil professionnel
+
+- id: related_publications
+  translation: Publications associées
+
+- id: citation
+  translation: Citation
+
+- id: copy_citation
+  translation: Copier
+
+- id: download_citation
+  translation: Télécharger
+
+- id: citation_copied
+  translation: Copié !
+
+- id: close
+  translation: Fermer
+
+- id: copyright_notice
+  translation: "© {year} {name}. Ce site est sous licence {license}"

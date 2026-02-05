@@ -1,0 +1,138 @@
+/* Global section spacing override
+ * HugoBlox 0.11 uses hardcoded Tailwind classes (py-8 to py-32)
+ * that don't reference the --hb-spacing-section CSS variable.
+ * This provides more compact padding across all sections.
+ */
+
+.hbb-section {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+@media (min-width: 640px) {
+  .hbb-section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hbb-section {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hbb-section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hbb-section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+ * PUBLICATION CITATION STYLES (Classic Academic Theme)
+ * ──────────────────────────────────────────────────────────────────────────── */
+
+/* Author highlight (site owner) */
+.author-highlight {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary-500);
+  text-underline-offset: 2px;
+}
+
+/* Publication title - blue link */
+.pub-title {
+  color: var(--color-primary-600);
+  font-weight: 500;
+}
+.pub-title:hover {
+  color: var(--color-primary-800);
+  text-decoration: underline;
+}
+.dark .pub-title {
+  color: var(--color-primary-400);
+}
+.dark .pub-title:hover {
+  color: var(--color-primary-300);
+}
+
+/* Year styling */
+.pub-year {
+  color: #6b7280; /* gray-500 */
+}
+.pub-year-value {
+  font-weight: 500;
+}
+.dark .pub-year {
+  color: #9ca3af; /* gray-400 */
+}
+
+/* Venue/journal styling */
+.pub-venue {
+  color: #059669; /* emerald-600 */
+  font-style: italic;
+}
+.dark .pub-venue {
+  color: #34d399; /* emerald-400 */
+}
+
+/* Publication links container */
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Classic button style for publication links */
+.pub-links .hb-attachment-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #374151; /* gray-700 */
+  background-color: #f3f4f6; /* gray-100 */
+  border: 1px solid #d1d5db; /* gray-300 */
+  border-radius: 0.375rem;
+  transition: all 0.15s ease;
+}
+.pub-links .hb-attachment-link:hover {
+  background-color: #e5e7eb; /* gray-200 */
+  border-color: #9ca3af; /* gray-400 */
+  color: #111827; /* gray-900 */
+}
+.dark .pub-links .hb-attachment-link {
+  color: #d1d5db; /* gray-300 */
+  background-color: #374151; /* gray-700 */
+  border-color: #4b5563; /* gray-600 */
+}
+.dark .pub-links .hb-attachment-link:hover {
+  background-color: #4b5563; /* gray-600 */
+  border-color: #6b7280; /* gray-500 */
+  color: #f9fafb; /* gray-50 */
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+ * THEME PICKER DROPDOWN FIX (Chrome compatibility)
+ * ──────────────────────────────────────────────────────────────────────────── */
+
+/* Style dropdown options for cross-browser consistency */
+select option {
+  background-color: #ffffff;
+  color: #1f2937; /* gray-800 */
+}
+.dark select option {
+  background-color: #1f2937; /* gray-800 */
+  color: #f3f4f6; /* gray-100 */
+}

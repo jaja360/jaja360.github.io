@@ -10,13 +10,14 @@ status:
 role: Postdoctoral Researcher in Computer Science
 bio: |
   I am currently a postdoctoral researcher in computer science at Université
-  TÉLUQ, where my research focuses on speeding up the conversion of floating-point
-  numbers into decimal strings. During my doctoral studies, I designed algorithms
-  and data structures that leverage modern computer architectures to solve large
-  instances of Markov decision processes (MDPs). In my master’s research, I
-  developed routing algorithms for electric vehicles aimed at determining the
-  optimal path between two points while minimizing travel time (including
-  driving, charging, and expected waiting time at charging stations).
+  TÉLUQ, where my research focuses on speeding up the conversion of integer and
+  floating-point numbers into decimal strings. During my doctoral studies, I
+  designed algorithms and data structures that leverage modern computer
+  architectures to solve large instances of Markov decision processes (MDPs). In
+  my master’s research, I developed routing algorithms for electric vehicles
+  aimed at determining the optimal path between two points while minimizing
+  travel time (including driving, charging, and expected waiting time at
+  charging stations).
 affiliations:
   - name: Université TÉLUQ
     url: https://teluq.ca/

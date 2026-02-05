@@ -1,0 +1,184 @@
+{{/* Citation Modal - Shows BibTeX with Copy and Download buttons */}}
+
+<div
+  x-data="citationModal()"
+  x-show="$store.citation.open"
+  @keydown.escape.window="$store.citation.open = false"
+  x-cloak
+  class="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm"
+  @click.self="$store.citation.open = false"
+>
+  <div
+    class="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl max-h-[80vh] bg-white dark:bg-gray-900 rounded-xl shadow-2xl flex flex-col"
+    x-transition:enter="transition ease-out duration-200"
+    x-transition:enter-start="opacity-0 translate-y-4 scale-95"
+    x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+    x-transition:leave="transition ease-in duration-150"
+    x-transition:leave-start="opacity-100 translate-y-0 scale-100"
+    x-transition:leave-end="opacity-0 translate-y-4 scale-95"
+    @click.stop
+  >
+    {{/* Header */}}
+    <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200 dark:border-gray-700">
+      <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{{ i18n "citation" | default "Citation" }}</h3>
+      <button
+        @click="$store.citation.open = false"
+        class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+        aria-label="{{ i18n "close" | default "Close" }}"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    {{/* Content */}}
+    <div class="flex-1 overflow-auto p-6">
+      <pre
+        x-ref="bibtexContent"
+        class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-sm font-mono text-gray-800 dark:text-gray-200 whitespace-pre-wrap break-words overflow-x-auto"
+        x-text="$store.citation.content"
+      ></pre>
+    </div>
+
+    {{/* Footer with buttons */}}
+    <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-gray-200 dark:border-gray-700">
+      <button
+        @click="downloadCitation()"
+        class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-colors"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+        </svg>
+        <span>{{ i18n "download_citation" | default "Download" }}</span>
+      </button>
+      <button
+        @click="copyCitation()"
+        class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 rounded-lg transition-colors"
+        :class="copied ? 'bg-green-600 hover:bg-green-600' : ''"
+      >
+        <svg x-show="!copied" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+        </svg>
+        <svg x-show="copied" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+        <span x-text="copied ? '{{ i18n "citation_copied" | default "Copied!" }}' : '{{ i18n "copy_citation" | default "Copy" }}'"></span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('alpine:init', () => {
+  // Initialize citation store
+  Alpine.store('citation', {
+    open: false,
+    content: '',
+    filename: ''
+  });
+
+  // Citation modal component
+  Alpine.data('citationModal', () => ({
+    copied: false,
+
+    init() {
+      this.$watch('$store.citation.open', (open) => {
+        if (open) {
+          document.body.style.overflow = 'hidden';
+          this.copied = false;
+        } else {
+          document.body.style.overflow = '';
+        }
+      });
+    },
+
+    async copyCitation() {
+      const content = Alpine.store('citation').content;
+      if (!content) return;
+
+      try {
+        await navigator.clipboard.writeText(content);
+        this.copied = true;
+        setTimeout(() => { this.copied = false; }, 2000);
+      } catch (err) {
+        console.error('Failed to copy:', err);
+      }
+    },
+
+    downloadCitation() {
+      const content = Alpine.store('citation').content;
+      const filename = Alpine.store('citation').filename;
+      if (!content) return;
+
+      // Extract filename from URL or use default
+      const name = filename ? filename.split('/').pop() : 'cite.bib';
+
+      const blob = new Blob([content], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = name;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+  }));
+});
+
+// Override cite button behavior - intercept clicks to show modal instead
+document.addEventListener('DOMContentLoaded', () => {
+  // Cache for prefetched citations
+  const citationCache = new Map();
+
+  // Prefetch all citations on page load
+  document.querySelectorAll('.js-cite-clipboard[data-filename]').forEach(async (button) => {
+    const filename = button.getAttribute('data-filename');
+    if (filename && !citationCache.has(filename)) {
+      try {
+        const response = await fetch(filename);
+        if (response.ok) {
+          citationCache.set(filename, await response.text());
+        }
+      } catch (e) {
+        console.error('Failed to prefetch citation:', e);
+      }
+    }
+  });
+
+  // Intercept cite button clicks with capture phase to run before default handler
+  document.addEventListener('click', async (e) => {
+    const citeButton = e.target.closest('.js-cite-clipboard');
+    if (!citeButton) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+
+    const filename = citeButton.getAttribute('data-filename');
+    if (!filename) return;
+
+    // Get citation content (from cache or fetch)
+    let content = citationCache.get(filename);
+    if (!content) {
+      try {
+        const response = await fetch(filename);
+        if (response.ok) {
+          content = await response.text();
+          citationCache.set(filename, content);
+        }
+      } catch (e) {
+        console.error('Failed to fetch citation:', e);
+        return;
+      }
+    }
+
+    if (content && window.Alpine) {
+      Alpine.store('citation').content = content;
+      Alpine.store('citation').filename = filename;
+      Alpine.store('citation').open = true;
+    }
+  }, true); // Use capture phase
+});
+</script>

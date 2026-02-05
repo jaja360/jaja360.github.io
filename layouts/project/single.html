@@ -1,0 +1,206 @@
+{{ define "main" }}
+
+{{/* Page Cover */}}
+{{ partial "components/cover.html" . }}
+
+<div class="mx-auto flex max-w-screen-xl">
+  {{ partial "components/sidebar.html" (dict "context" . "no_sidebar" true) }}
+  {{ partial "components/toc.html" . }}
+  <article class="w-full break-words flex min-h-[calc(100vh-var(--navbar-height))] min-w-0 justify-center pb-8 pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+    <main class="w-full min-w-0 max-w-6xl px-6 pt-4 md:px-12">
+
+      {{ if .Params.show_breadcrumb }}
+      <div class="mb-4">
+        {{ partial "components/breadcrumb.html" . }}
+      </div>
+      {{ end }}
+
+      {{/* Add spacing if cover has overlapping icon */}}
+      {{ $cover := partial "functions/get_cover_image.html" . }}
+      {{ $has_overlap_icon := false }}
+      {{ if $cover }}
+        {{ $icon_config := .Params.cover.icon | default (dict) }}
+        {{ if or $icon_config.name $icon_config.emoji }}
+          {{ $icon_position := $icon_config.position | default "overlap" }}
+          {{ if eq $icon_position "overlap" }}
+            {{ $has_overlap_icon = true }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+
+      <h1 class="{{ if $has_overlap_icon }}mt-12{{ else }}mt-2{{ end }} text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100" data-pagefind-meta="title" data-pagefind-body>
+        {{/* Inline icon before title if specified */}}
+        {{ if $cover }}
+          {{ $icon_config := .Params.cover.icon | default (dict) }}
+          {{ if or $icon_config.name $icon_config.emoji }}
+            {{ $icon_position := $icon_config.position | default "overlap" }}
+            {{ if eq $icon_position "inline" }}
+              <span class="inline-flex items-center gap-3">
+                {{ if $icon_config.emoji }}
+                  <span class="text-4xl">{{ $icon_config.emoji }}</span>
+                {{ else if $icon_config.name }}
+                  <span class="w-10 h-10">
+                    {{ partial "components/icon.html" (dict "name" $icon_config.name "attributes" "class=\"w-full h-full\"") }}
+                  </span>
+                {{ end }}
+                <span>{{- .Title -}}</span>
+              </span>
+            {{ else }}
+              {{- .Title -}}
+            {{ end }}
+          {{ else }}
+            {{- .Title -}}
+          {{ end }}
+        {{ else }}
+          {{- .Title -}}
+        {{ end }}
+      </h1>
+
+      {{ $display_date := .Params.event_start | default .Date }}
+      <div class="mt-4 mb-16">
+      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2">
+        {{- if $display_date | and (not .Params.hide_date) -}}
+        <span class="mr-1">{{- (time $display_date) | time.Format (site.Params.hugoblox.locale.date_format | default ":date_long") -}}</span>
+        {{- end -}}
+        </div>
+
+        <div class="mt-3">
+          {{ partial "page_links_div.html" . }}
+        </div>
+      </div>
+
+      {{ $featured := partial "functions/get_featured_image.html" . }}
+      {{/* Safely extract image parameters - handle case where image is not a map */}}
+      {{ $image_params := dict }}
+      {{ if and .Params.image (reflect.IsMap .Params.image) }}
+        {{ $image_params = .Params.image }}
+      {{ end }}
+      {{/* Featured image layout */}}
+      {{ if and $featured (not $image_params.preview_only) }}
+      {{/* Fit image within max size. */}}
+      {{ $image := $featured }}
+
+      {{/* Determine image placement. */}}
+      {{ $placement := $image_params.placement | default 1 }}{{/* Default to full column width. */}}
+      {{/* Configure responsive processing based on placement */}}
+      {{ $image_container := "" }}
+      {{ $responsive_sizes := slice }}
+      {{ $sizes_attr := "" }}
+      {{ if eq $placement 2}}
+        {{ $image_container = "container" }}
+        {{ $responsive_sizes = slice 480 768 1024 1200 1600 }}
+        {{ $sizes_attr = "(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1200px) 80vw, 1200px" }}
+      {{else if eq $placement 3}}
+        {{ $image_container = "container-fluid" }}
+        {{ $responsive_sizes = slice 768 1024 1366 1920 2560 }}
+        {{ $sizes_attr = "(max-width: 768px) 100vw, (max-width: 1366px) 90vw, (max-width: 1920px) 80vw, 2560px" }}
+      {{else}}
+        {{ $image_container = "article-container" }}
+        {{ $responsive_sizes = slice 320 480 640 720 960 }}
+        {{ $sizes_attr = "(max-width: 480px) 100vw, (max-width: 640px) 90vw, (max-width: 720px) 80vw, 720px" }}
+      {{end}}
+      
+      {{/* Process featured image using utility with placement-specific constraints */}}
+      {{ if ne $featured.MediaType.SubType "gif" }}
+        {{/* Pre-fit image to placement constraints, then apply responsive processing */}}
+        {{ $fitted_image := $featured }}
+        {{ if eq $placement 2}}
+          {{ $fitted_image = $featured.Fit "1200x2500" }}
+        {{else if eq $placement 3}}
+          {{ $fitted_image = $featured.Fit "2560x2560" }}
+        {{else}}
+          {{ $fitted_image = $featured.Fit "720x2500" }}
+        {{end}}
+        
+        {{ $responsive := partial "functions/process_responsive_image.html" (dict 
+            "image" $fitted_image 
+            "mode" "responsive"
+            "sizes" $responsive_sizes
+        ) }}
+        
+        {{/* Featured image - use fitted image dimensions for container, responsive for srcset */}}
+        <div class="article-header {{$image_container}} featured-image-wrapper mt-4 mb-16" style="max-width: {{$fitted_image.Width}}px; max-height: {{$fitted_image.Height}}px;">
+          <div style="position: relative">
+            <img srcset="{{ $responsive.srcset }}"
+                 sizes="{{ $sizes_attr }}"
+                 src="{{ $responsive.fallback.RelPermalink }}" 
+                 data-pagefind-meta="image[src]"
+                 width="{{ $fitted_image.Width }}" 
+                 height="{{ $fitted_image.Height }}" 
+                 alt="{{ with $image_params.alt_text }}{{.}}{{ end }}" 
+                 class="featured-image"
+                 fetchpriority="high">
+            {{ with $image_params.caption }}<span class="article-header-caption">{{ . | markdownify | emojify }}</span>{{ end }}
+          </div>
+        </div>
+      {{ else }}
+        {{/* Handle GIF - apply same placement constraints without responsive processing */}}
+        {{ $image := $featured }}
+        {{ if eq $placement 2}}
+          {{ $image = $featured.Fit "1200x2500" }}
+        {{else if eq $placement 3}}
+          {{ $image = $featured.Fit "2560x2560" }}
+        {{else}}
+          {{ $image = $featured.Fit "720x2500" }}
+        {{end}}
+        <div class="article-header {{$image_container}} featured-image-wrapper mt-4 mb-16" style="max-width: {{$image.Width}}px; max-height: {{$image.Height}}px;">
+          <div style="position: relative">
+            <img src="{{ $image.RelPermalink }}" 
+                 data-pagefind-meta="image[src]"
+                 width="{{ $image.Width }}" 
+                 height="{{ $image.Height }}" 
+                 alt="{{ with $image_params.alt_text }}{{.}}{{ end }}" 
+                 class="featured-image"
+                 fetchpriority="high">
+            {{ with $image_params.caption }}<span class="article-header-caption">{{ . | markdownify | emojify }}</span>{{ end }}
+          </div>
+        </div>
+      {{ end }}
+      {{end}}
+
+      <div class="prose prose-slate lg:prose-xl dark:prose-invert" data-pagefind-body>
+        {{ with .Section }}
+          <span data-pagefind-filter="type" style="display:none;">{{ . }}</span>
+        {{ end }}
+        {{ with .Params.categories }}
+          <span data-pagefind-filter="category" style="display:none;">{{ index . 0 }}</span>
+        {{ end }}
+        {{ .Content }}
+      </div>
+
+      {{/* Related Publications Section */}}
+      {{ $project_slug := .File.ContentBaseName }}
+      {{ $all_pubs := where site.RegularPages "Section" "publications" }}
+      {{ $related_pubs := slice }}
+      {{ range $all_pubs }}
+        {{ if .Params.projects }}
+          {{ if in .Params.projects $project_slug }}
+            {{ $related_pubs = $related_pubs | append . }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      
+      {{ if gt (len $related_pubs) 0 }}
+      <div class="mt-16">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 mb-6">
+          {{ i18n "related_publications" }}
+        </h2>
+        <div class="pub-list">
+          {{ range sort $related_pubs ".Date" "desc" }}
+            {{ partial "views/citation" (dict "item" .) }}
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+
+      {{ partial "components/last-edited.html" . }}
+
+      <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
+        {{ .Scratch.Set "invert_pager" true }}
+        {{ partial "page_footer" . }}
+      </div>
+
+    </main>
+  </article>
+</div>
+{{ end }}

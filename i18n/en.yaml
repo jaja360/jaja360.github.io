@@ -1,0 +1,20 @@
+- id: related_publications
+  translation: Related Publications
+
+- id: citation
+  translation: Citation
+
+- id: copy_citation
+  translation: Copy
+
+- id: download_citation
+  translation: Download
+
+- id: citation_copied
+  translation: Copied!
+
+- id: close
+  translation: Close
+
+- id: copyright_notice
+  translation: "© {year} {name}. This work is licensed under {license}"

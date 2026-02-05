@@ -1,0 +1,78 @@
+schema: hugoblox/author/v1
+slug: me
+name:
+  display: Jaël Champagne Gareau
+  given: Jaël
+  family: Champagne Gareau
+is_owner: true
+status:
+  icon: "💾"
+role: Chercheur postdoctoral en informatique
+bio: |
+  Je suis actuellement chercheur postdoctoral en informatique à l'Université
+  TÉLUQ, où mes travaux portent sur l'accélération de la conversion de nombres
+  entiers et flottants en chaînes de caractères décimales. Au cours de mon
+  doctorat, j'ai conçu des algorithmes et des structures de données exploitant
+  l'architecture moderne des ordinateurs afin de résoudre de grandes instances
+  de processus décisionnels de Markov (MDP). Durant ma maîtrise, j'ai développé
+  des algorithmes de planification d'itinéraires pour véhicules électriques,
+  visant à déterminer le chemin optimal entre deux points tout en minimisant
+  le temps total du trajet (déplacement, recharge et attente aux bornes).
+affiliations:
+  - name: Université TÉLUQ
+    url: https://teluq.ca/
+ids:
+  google_scholar: eI9dpGUAAAAJ
+  orcid: 0000-0002-1906-4157
+links:
+  - icon: at-symbol
+    url: mailto:champagne_gareau.jael@courrier.uqam.ca
+    label: Courriel
+  - icon: brands/x
+    url: https://x.com/jaja360
+  - icon: brands/github
+    url: https://github.com/jaja360
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/jaja360
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=eI9dpGUAAAAJ
+  - icon: academicons/orcid
+    url: https://orcid.org/0000-0002-1906-4157
+interests:
+  - Intelligence artificielle
+  - Planification automatique
+  - Structures de données et algorithmes
+  - Programmation haute-performance
+  - Conversion de nombres en chaînes de caractères
+education:
+  - institution: Université TÉLUQ
+    degree: Recherche postdoctorale en informatique
+    start: 2025-01-01
+    summary: Recherche sur divers aspects des algorithmes de conversion de nombres en chaînes de caractères.
+  - institution: Université du Québec à Montréal
+    degree: Doctorat en informatique (IA)
+    start: 2019-09-01
+    end: 2024-12-30
+    summary: Recherche sur les algorithmes et structures de données pour améliorer l'efficacité des systèmes de planification probabiliste (processus décisionnels de Markov).
+  - institution: Université du Québec à Montréal
+    degree: Maîtrise en informatique (IA)
+    start: 2017-09-01
+    end: 2019-08-31
+    summary: Recherche sur les algorithmes de planification d'itinéraires pour véhicules électriques.
+  - institution: Université du Québec à Montréal
+    degree: Certificat avancé en développement logiciel
+    start: 2016-09-01
+    end: 2017-05-31
+  - institution: Université du Québec à Montréal
+    degree: Baccalauréat en mathématiques fondamentales
+    start: 2013-09-01
+    end: 2016-08-31
+languages:
+  - name: Français
+    level: 5
+    percent: 100
+    label: Langue maternelle
+  - name: Anglais
+    level: 5
+    percent: 100
+    label: Langue maternelle

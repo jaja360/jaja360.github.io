@@ -4,11 +4,8 @@ title: ''
 date: 2025-12-01
 type: landing
 
-design:
-  spacing: '6rem'
-
 sections:
-  - block: resume-biography-3
+  - block: resume-biography-classic
     content:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: me
@@ -16,16 +13,9 @@ sections:
       button:
         text: Télécharger mon CV
         url: uploads/resume.pdf
-      headings:
-        about: ''
-        education: ''
-        interests: ''
     design:
-      background:
-        gradient_mesh:
-          enable: true
       avatar:
-        size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
+        size: medium # Options: small (150px), medium (200px), large (250px)
         shape: circle # Options: circle (default), square, rounded
   - block: collection
     id: projects
@@ -33,7 +23,7 @@ sections:
       title: Projets
       filters:
         folders:
-          - projects
+          - project
     design:
       # view: showcase
       # flip_alt_rows: true
@@ -55,16 +45,16 @@ sections:
           - publications
     design:
       view: citation
-  - block: collection
-    id: blog
-    content:
-      title: Articles de blog récents
-      page_type: blog
-      count: 10
-      order: desc
-    design:
-      view: card
-      spacing:
-        padding: [0, 0, 0, 0]
+#  - block: collection
+#    id: blog
+#    content:
+#      title: Articles de blog récents
+#      page_type: blog
+#      count: 10
+#      order: desc
+#    design:
+#      view: card
+#      spacing:
+#        padding: [0, 0, 0, 0]
 
 ---

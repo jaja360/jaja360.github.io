@@ -21,6 +21,9 @@ hugo_stats.json
 # Auto-generated JS config
 **/assets/jsconfig.json
 
+# Hugo sources
+_vendor/
+
 # ============================================================================
 # Node.js & Package Managers
 # ============================================================================
