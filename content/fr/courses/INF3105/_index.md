@@ -1,6 +1,8 @@
 ---
 title: "INF3105: Structures de données et Algorithmes"
+linkTitle: INF3105
 date: "2024-04-29T00:00:00Z"
+type: docs
 featured: true
 tags:
   - Data Structures
@@ -9,15 +11,24 @@ tags:
   - UQAM
   - Course
 
-summary: "- **Objectif**: Approfondir les connaissances des structures de données et des algorithmes et les appliquer à la résolution de problèmes.
+content_meta:
+  content_type: 'Course'
+  prerequisites: ['INF1132', 'INF2120']
 
-- **Contenu**: Rappels sur les types abstraits de données. Analyse et complexité des algorithmes. Abstractions de données et de contrôle. Collections et les structures de données nécessaires à leurs réalisations. Arbres équilibrés, tables de hachage, graphes. Bibliothèques publiques ou normalisées."
+summary: "Cours avancé sur les structures de données (arbres équilibrés, tables de hachage, graphes) et l'analyse algorithmique. Programmation en C++."
 
 links:
   - name: Site du cours
     url: https://cria2.uqam.ca/INF3105/
 
+params:
+  sidebar:
+    open: true
+  show_child_pages: false
+
 ---
+
+Bienvenue au cours INF3105!
 
 <!-- ```mermaid -->
 <!-- graph LR; -->
