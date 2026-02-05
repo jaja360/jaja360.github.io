@@ -42,6 +42,8 @@ abstract: |
   gaps varying across CPU architectures and compilers. We suggest some
   optimization targets for future research.
 links:
+  - type: pdf
+    url: https://onlinelibrary.wiley.com/doi/epdf/10.1002/spe.70056
   - type: code
     url: https://github.com/fastfloat/float_serialization_benchmark
   - name: Benchmark Data

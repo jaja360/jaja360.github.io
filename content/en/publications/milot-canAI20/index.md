@@ -11,7 +11,7 @@ tags:
   - Trip Reconstruction
 categories: []
 projects: []
-date: 2020-01-01
+date: 2020-05-13
 lastmod: 2022-04-16T16:44:02-04:00
 publishDate: 2022-04-16T20:44:02.562988Z
 featured: false
