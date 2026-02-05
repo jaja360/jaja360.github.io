@@ -1,0 +1,21 @@
+{{ $non_data_attributes := slice "id" "class" }}
+{{ $image_attributes := slice "background-image" "background-video" }}
+{{- /* Get the base path for the page bundle (works for both HTML and Present outputs) */ -}}
+{{ $basePath := $.Page.RelPermalink }}
+{{- /* If we're in the Present output (/present/...), strip it to get the actual page bundle path */ -}}
+{{ if hasPrefix $basePath (printf "/%s/present/" $.Page.Language.Lang) }}
+  {{ $basePath = replace $basePath (printf "/%s/present/" $.Page.Language.Lang) (printf "/%s/" $.Page.Language.Lang) }}
+{{ end }}
+<section data-noprocess data-shortcode-slide
+  {{ range $key, $value := $.Params }}
+      {{ $attribute := cond (in $non_data_attributes $key) $key (delimit (slice "data" $key) "-") }}
+      {{ $resolvedValue := $value }}
+      {{- /* Resolve relative paths for image/video attributes */ -}}
+      {{ if in $image_attributes $key }}
+        {{ if and (not (hasPrefix $value "/")) (not (hasPrefix $value "http")) }}
+          {{- /* It's a relative path - resolve it relative to the page bundle */ -}}
+          {{ $resolvedValue = printf "%s%s" $basePath $value }}
+        {{ end }}
+      {{ end }}
+      {{ $attribute | safeHTMLAttr }}="{{ $resolvedValue }}"
+  {{ end }}>

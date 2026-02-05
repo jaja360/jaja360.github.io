@@ -56,21 +56,21 @@ sections:
 #      view: card
 #      spacing:
 #        padding: [0, 0, 0, 0]
-- block: collection
-    id: teaching
-    content:
-      title: Enseignement
-      filters:
-        folders:
-          - courses
-        kinds:
-          - section
-        tag: Course
-    design:
-      view: article-grid
-      show_read_time: false
-      show_date: false
-      show_read_more: false
-      columns: 2
+#  - block: collection
+#    id: teaching
+#    content:
+#      title: Enseignement
+#      filters:
+#        folders:
+#          - courses
+#        kinds:
+#          - section
+#        tag: Course
+#    design:
+#      view: article-grid
+#      show_read_time: false
+#      show_date: false
+#      show_read_more: false
+#      columns: 2
 
 ---

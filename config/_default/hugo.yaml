@@ -53,3 +53,12 @@ security:
   _merge: deep
 sitemap:
   _merge: deep
+
+# Apply Present output to all slides pages
+cascade:
+  - _target:
+      path: /slides/**
+      kind: page
+    outputs:
+      - HTML
+      - Present

@@ -88,11 +88,11 @@ Qu'est-ce qui explique la différence de performance?
 
 ---
 
-{{< slide background-image="./figs/zen4.png" background-size="contain" background-position="center" background-repeat="no-repeat" >}}
+{{< slide background-image="figs/zen4.png" background-size="contain" background-position="center" background-repeat="no-repeat" >}}
 
 ---
 
-{{< slide background-image="./figs/RAT.svg" background-size="contain" background-position="center" background-repeat="no-repeat" >}}
+{{< slide background-image="figs/RAT.svg" background-size="contain" background-position="center" background-repeat="no-repeat" >}}
 
 
 ---
@@ -229,7 +229,7 @@ RAX:&nbsp;&nbsp;$P_0$&nbsp;&nbsp;&nbsp;&nbsp;RCX:&nbsp;&nbsp;$\cancel{\ast},~\ca
 
 ---
 
-{{< slide background-image="./figs/zen4.png" background-size="contain" background-position="center" background-repeat="no-repeat" >}}
+{{< slide background-image="figs/zen4.png" background-size="contain" background-position="center" background-repeat="no-repeat" >}}
 
 ---
 
