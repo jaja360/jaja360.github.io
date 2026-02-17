@@ -21,3 +21,9 @@
 
 - id: copyright_notice
   translation: "© {year} {name}. Ce site est sous licence {license}"
+
+- id: pub_preprint
+  translation: preprint
+
+- id: pub_under_review
+  translation: en révision

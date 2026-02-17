@@ -18,6 +18,12 @@
   {{ else if $item.Params.publication }}
     <span class="pub-venue">{{- $item.Params.publication | markdownify -}}</span>.
   {{ end }}
+  {{- if in $item.Params.publication_types "preprint" }}
+    <span class="pub-preprint">({{ i18n "pub_preprint" | default "preprint" }})</span>
+  {{- end -}}
+  {{- if in $item.Params.publication_types "submitted" }}
+    <span class="pub-submitted">({{ i18n "pub_under_review" | default "under review" }})</span>
+  {{- end -}}
 
   {{ if $has_attachments }}
   <div class="pub-links">
@@ -38,6 +44,12 @@
     <span class="pub-venue">{{- $item.Params.publication | markdownify -}}</span>,
   {{ end }}
   <span class="pub-year"><span class="pub-year-value">{{- $year -}}</span></span>.
+  {{- if in $item.Params.publication_types "preprint" }}
+    <span class="pub-preprint">({{ i18n "pub_preprint" | default "preprint" }})</span>
+  {{- end -}}
+  {{- if in $item.Params.publication_types "submitted" }}
+    <span class="pub-submitted">({{ i18n "pub_under_review" | default "under review" }})</span>
+  {{- end -}}
 
   {{ if $has_attachments }}
   <div class="pub-links">

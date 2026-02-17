@@ -18,3 +18,9 @@
 
 - id: copyright_notice
   translation: "© {year} {name}. This work is licensed under {license}"
+
+- id: pub_preprint
+  translation: preprint
+
+- id: pub_under_review
+  translation: under review
