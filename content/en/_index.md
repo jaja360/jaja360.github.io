@@ -42,7 +42,7 @@ sections:
       text: ''
       filters:
         folders:
-          - publications
+          - publication
     design:
       view: citation
 #  - block: collection

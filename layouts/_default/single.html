@@ -245,7 +245,7 @@
       {{end}}
 
       {{/* EVENT / PUBLICATION METADATA */}}
-      {{ if .Params.abstract | or (eq .Type "publications") | or (eq .Type "events") }}
+      {{ if .Params.abstract | or (eq .Type "publication") | or (eq .Type "events") }}
         <div class="max-w-prose grid grid-cols-1 md:grid-cols-[200px_auto] gap-4 my-6">
 
         {{ if .Params.abstract }}

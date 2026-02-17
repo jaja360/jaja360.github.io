@@ -170,7 +170,7 @@
 
       {{/* Related Publications Section */}}
       {{ $project_slug := .File.ContentBaseName }}
-      {{ $all_pubs := where site.RegularPages "Section" "publications" }}
+      {{ $all_pubs := where site.RegularPages "Section" "publication" }}
       {{ $related_pubs := slice }}
       {{ range $all_pubs }}
         {{ if .Params.projects }}
