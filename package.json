@@ -2,9 +2,8 @@
   "name": "jaelgareau-com",
   "private": true,
   "scripts": {
-    "dev": "hugo server --disableFastRender",
-    "build": "hugo --minify",
-    "lint": "echo 'TODO: add lint script'"
+    "dev": "hbx dev",
+    "build": "hbx build"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.12",
@@ -14,5 +13,8 @@
   },
   "version": "1.0.0",
   "packageManager": "pnpm@10.14.0",
-  "description": "Academic CV starter template for Hugo Blox with Tailwind CSS v4"
+  "description": "Academic CV starter template for Hugo Blox with Tailwind CSS v4",
+  "devDependencies": {
+    "hugoblox": "^0.12.6"
+  }
 }
