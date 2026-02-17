@@ -39,11 +39,12 @@ links:
   - icon: academicons/orcid
     url: https://orcid.org/0000-0002-1906-4157
 interests:
+  - Programmation haute-performance
+  - Parallélisme multi-niveau (ILP, DLP, TLP)
+  - Conversion de nombres en chaînes de caractères
+  - Structures de données et algorithmes
   - Intelligence artificielle
   - Planification automatique
-  - Structures de données et algorithmes
-  - Programmation haute-performance
-  - Conversion de nombres en chaînes de caractères
 education:
   - institution: Université TÉLUQ
     degree: Recherche postdoctorale en informatique

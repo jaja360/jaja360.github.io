@@ -39,11 +39,12 @@ links:
   - icon: academicons/orcid
     url: https://orcid.org/0000-0002-1906-4157
 interests:
+  - High-Performance Computing
+  - Multi-level Parallelism (ILP, DLP, TLP)
+  - Number to String Conversion Algorithms
+  - Data Structures and Algorithms
   - Artificial Intelligence
   - Automated Planning
-  - Data Structures and Algorithms
-  - High-Performance Computing
-  - Number to String Conversion Algorithms
 education:
   - institution: Université TÉLUQ
     degree: Postdoctoral Research in Computer Science
