@@ -62,7 +62,7 @@ links:
     url: slides.pdf
   - type: poster
     url: poster.pdf
-  - name: ACM Page
+  - type: acm
     url: https://dl.acm.org/doi/abs/10.5555/3635637.3662877
 image:
   caption: ""

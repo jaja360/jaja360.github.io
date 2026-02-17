@@ -49,7 +49,7 @@ links:
     url: slides.pdf
   - type: poster
     url: poster.pdf
-  - name: Supplementary Material
+  - type: supplementary
     url: supp.pdf
 image:
   caption: ""

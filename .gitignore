@@ -30,6 +30,7 @@ _vendor/
 
 # Dependencies
 node_modules/
+pnpm-lock.yaml
 
 # ============================================================================
 # Environment & Configuration

@@ -43,7 +43,7 @@ abstract: |
 links:
   - type: code
     url: https://github.com/fastfloat/int_serialization_benchmark
-  - name: Benchmark Data
+  - type: benchmark
     url: results.zip
 image:
   caption: ""

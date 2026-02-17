@@ -5,7 +5,7 @@
 {{ $built := partial "functions/build_links" (dict "page" $page "is_list" $is_list) }}
 
 {{/* Define desired button order: pdf, cite, code, project, poster, slides, DOI, supplementary, custom */}}
-{{ $type_order := slice "pdf" "preprint" "bibtex" "code" "project" "poster" "slides" "doi" "dataset" "video" "source" "model" "site" "demo" "custom" }}
+{{ $type_order := slice "pdf" "preprint" "bibtex" "code" "project" "poster" "slides" "doi" "dataset" "benchmark" "supplementary" "openreview" "acm" "official" "video" "source" "model" "site" "demo" "custom" }}
 
 {{/* Sort links by type order */}}
 {{ $sorted := slice }}
@@ -38,6 +38,11 @@
   "btn_doi" "DOI"
   "btn_code" "Code"
   "btn_dataset" "Dataset"
+  "btn_benchmark" "Benchmark Data"
+  "btn_supplementary" "Supplementary Material"
+  "btn_openreview" "OpenReview Page"
+  "btn_acm" "ACM Page"
+  "btn_official" "Official Page"
   "btn_model" "Model"
   "btn_slides" "Slides"
   "btn_video" "Video"

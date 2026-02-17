@@ -46,7 +46,7 @@ links:
     url: https://onlinelibrary.wiley.com/doi/epdf/10.1002/spe.70056
   - type: code
     url: https://github.com/fastfloat/float_serialization_benchmark
-  - name: Benchmark Data
+  - type: benchmark
     url: results.zip
 image:
   caption: ""

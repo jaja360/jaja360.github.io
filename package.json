@@ -5,16 +5,14 @@
     "dev": "hbx dev",
     "build": "hbx build"
   },
-  "dependencies": {
-    "@tailwindcss/cli": "^4.1.12",
-    "@tailwindcss/typography": "^0.5.10",
-    "preact": "^10.27.2",
-    "tailwindcss": "^4.1.12"
-  },
   "version": "1.0.0",
   "packageManager": "pnpm@10.14.0",
   "description": "Academic CV starter template for Hugo Blox with Tailwind CSS v4",
   "devDependencies": {
-    "hugoblox": "^0.12.6"
+    "@tailwindcss/cli": "^4.1.12",
+    "@tailwindcss/typography": "^0.5.10",
+    "hugoblox": "^0.12.6",
+    "preact": "^10.27.2",
+    "tailwindcss": "^4.1.12"
   }
 }

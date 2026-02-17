@@ -49,7 +49,7 @@ links:
     url: https://openreview.net/pdf?id=vtWg28K6Lu
   - type: slides
     url: slides.pdf
-  - name: OpenReview Page
+  - type: openreview
     url: https://openreview.net/forum?id=vtWg28K6Lu
 image:
   caption: ""

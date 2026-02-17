@@ -51,7 +51,7 @@ links:
     url: https://github.com/MathGravel/sspmdp-classifier
   - type: slides
     url: slides.pdf
-  - name: Official Page
+  - type: official
     url: https://caiac.pubpub.org/pub/5zlwwdas/release/1
 image:
   caption: ""

@@ -24,3 +24,24 @@
 
 - id: pub_under_review
   translation: under review
+
+- id: btn_benchmark
+  translation: Benchmark Data
+
+- id: btn_supplementary
+  translation: Supplementary Material
+
+- id: btn_openreview
+  translation: OpenReview Page
+
+- id: btn_acm
+  translation: ACM Page
+
+- id: btn_official
+  translation: Official Page
+
+- id: btn_poster
+  translation: Poster
+
+- id: btn_slides
+  translation: Slides

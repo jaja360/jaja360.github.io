@@ -27,3 +27,24 @@
 
 - id: pub_under_review
   translation: en révision
+
+- id: btn_benchmark
+  translation: Résultats d'évaluation
+
+- id: btn_supplementary
+  translation: Matériel supplémentaire
+
+- id: btn_openreview
+  translation: Page OpenReview
+
+- id: btn_acm
+  translation: Page ACM
+
+- id: btn_official
+  translation: Page officielle
+
+- id: btn_poster
+  translation: Affiche
+
+- id: btn_slides
+  translation: Diapositives
