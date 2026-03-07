@@ -1,12 +1,3 @@
-schema: hugoblox/author/v1
-slug: me
-name:
-  display: Jaël Champagne Gareau
-  given: Jaël
-  family: Champagne Gareau
-is_owner: true
-status:
-  icon: "💾"
 role: Chercheur postdoctoral en informatique
 bio: |
   Je suis actuellement chercheur postdoctoral en informatique à l'Université
@@ -18,12 +9,6 @@ bio: |
   des algorithmes de planification d'itinéraires pour véhicules électriques,
   visant à déterminer le chemin optimal entre deux points tout en minimisant
   le temps total du trajet (déplacement, recharge et attente aux bornes).
-affiliations:
-  - name: Université TÉLUQ
-    url: https://teluq.ca/
-ids:
-  google_scholar: eI9dpGUAAAAJ
-  orcid: 0000-0002-1906-4157
 links:
   - icon: at-symbol
     url: mailto:champagne_gareau.jael@courrier.uqam.ca
