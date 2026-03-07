@@ -7,3 +7,9 @@ pnpm dlx pagefind --site "public"
 
 # Send to server
 rsync -avz --delete public/ jgareau@192.168.0.10:~/site
+
+# Purge cloudflare cache
+curl -X POST "https://api.cloudflare.com/client/v4/zones/e718cd15d0587d4e294aee8eaefd909d/purge_cache" \
+       -H "Authorization: Bearer ${CLOUDFLARE_TOKEN}" \
+       -H "Content-Type: application/json" \
+       -d '{"purge_everything":true}'
