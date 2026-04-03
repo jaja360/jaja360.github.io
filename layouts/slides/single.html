@@ -189,7 +189,8 @@
         </div>
         {{ end }}
 
-        {{/* Topics/Tags - Fixed to link to actual tag pages */}}
+        {{/* LOCAL OVERRIDE: keep topic chips language-aware and linked to real tag pages. */}}
+        {{/* Upstream v0.12.0 points them to /slides/, which is invalid in this site setup. */}}
         {{ if $topics }}
         <div class="mb-6">
           <h2 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-2">{{ $topics_label }}</h2>

@@ -56,7 +56,7 @@ sitemap:
 
 # Apply Present output to all slides pages
 cascade:
-  - _target:
+  - target:
       path: /slides/**
       kind: page
     outputs:
