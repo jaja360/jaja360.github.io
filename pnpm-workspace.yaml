@@ -1,7 +1,1 @@
-packages:
-  - ./*
-
-onlyBuiltDependencies:
-  - '@parcel/watcher'
-  - '@tailwindcss/oxide'
-  - keytar
+preferSymlinkedExecutables: true
