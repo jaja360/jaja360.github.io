@@ -11,20 +11,23 @@ tags:
   - Binary
   - Shortest String
   - Conversion
+  - SIMD
+  - AVX-512
 categories: []
 projects:
   - Float
-date: 2026-02-16
-lastmod: 2026-02-16T16:44:02-04:00
+date: 2026-04-28
+lastmod: 2026-04-28T16:44:02-04:00
 publishDate: 2026-02-16T16:44:02-04:00
 featured: false
 draft: false
 publication_types:
-  - submitted
+  - article-journal
 publication: "Software: Practice and Experience"
-<!-- hugoblox: -->
-<!--   ids: -->
-<!--     doi: -->
+hugoblox:
+  ids:
+    # doi:
+    arxiv: 2604.26019
 summary: ""
 abstract: |
   Converting binary integers to variable-length decimal strings is a fundamental
@@ -50,4 +53,4 @@ image:
   focal_point: Smart
   preview_only: false
 ---
-This paper has been submitted for peer review. Data are shared here for reviewer access.
+This paper has been accepted for publication in *Software: Practice and Experience*. The accepted author version is available on arXiv while the journal version is not yet available online.

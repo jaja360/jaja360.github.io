@@ -25,6 +25,7 @@ publication: "Software: Practice and Experience"
 hugoblox:
   ids:
     doi: 10.1002/spe.70056
+    arxiv: 2603.06581
 summary: ""
 abstract: |
   When sharing or logging numerical data, we must convert binary floating-point
