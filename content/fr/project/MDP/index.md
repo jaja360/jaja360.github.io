@@ -2,8 +2,7 @@
 title: Processus Décisionnels de Markov
 summary: Ce projet vise à trouver différentes façons d'améliorer la performance des planificateurs de (SSP-)MDP en considérant l'architecture des ordinateurs (p.ex., la mémoire cache, le parallélisme, etc.).
 tags: [MDP, Probabilistic Planning]
-date: "2022-06-01T00:00:00Z"
-
+date: "2022-06-01"
 image:
   caption: Exemple d'un MDP avec 3 états et 2 actions applicables par état
   focal_point: Smart

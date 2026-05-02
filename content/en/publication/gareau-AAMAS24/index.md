@@ -17,8 +17,6 @@ categories: []
 projects:
   - veplan
 date: 2024-05-09
-lastmod: 2024-04-26T16:44:02-04:00
-publishDate: 2024-04-26T20:44:02.264969Z
 featured: false
 draft: false
 publication_types:

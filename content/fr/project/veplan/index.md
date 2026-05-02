@@ -2,8 +2,7 @@
 title: Planification d'itinéraires pour véhicules électriques
 summary: Ce projet visait à créer un planification pour VÉs qui considère à la fois le temps de déplacement, le temps de recharge, et le temps d'attente aux bornes.
 tags: [Electric Vehicles, Deterministic Planning]
-date: "2019-09-01T00:00:00Z"
-
+date: "2019-09-01"
 image:
   caption: Des véhicules électriques en train de se charger à Montréal
   focal_point: Smart

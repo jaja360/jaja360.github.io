@@ -16,8 +16,6 @@ categories: []
 projects:
   - MDP
 date: 2024-12-01
-lastmod: 2024-12-04T19:44:02-04:00
-publishDate: 2024-12-04T20:44:02.661609Z
 featured: false
 draft: false
 publication: Université du Québec à Montréal

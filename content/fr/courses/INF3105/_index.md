@@ -1,7 +1,7 @@
 ---
 title: "INF3105: Structures de données et Algorithmes"
 linkTitle: INF3105
-date: "2024-04-29T00:00:00Z"
+date: "2024-04-29"
 type: docs
 featured: true
 tags:

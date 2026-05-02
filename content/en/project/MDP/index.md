@@ -2,8 +2,7 @@
 title: Markov Decision Processes
 summary: This project aimed at finding different ways to improve (SSP-)MDP planners performance when considering computer architectures (e.g., cache-memory, parallelism)
 tags: [MDP, Probabilistic Planning]
-date: "2022-06-01T00:00:00Z"
-
+date: "2022-06-01"
 image:
   caption: An example of a MDP with 3 states and 2 applicable actions per state
   focal_point: Smart

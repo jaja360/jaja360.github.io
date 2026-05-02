@@ -14,8 +14,6 @@ categories: []
 projects:
   - MDP
 date: 2024-07-15
-lastmod: 2024-07-15
-publishDate: 2024-07-13
 featured: false
 draft: false
 publication_types:

@@ -15,8 +15,6 @@ categories: []
 projects:
   - CPP
 date: 2023-01-27
-lastmod: 2023-01-16T16:44:02-04:00
-publishDate: 2023-01-16T16:44:02-04:00
 featured: false
 draft: false
 publication_types:

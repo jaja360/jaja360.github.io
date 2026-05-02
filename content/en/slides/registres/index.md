@@ -4,7 +4,7 @@ summary: "Introduction à la table d'alias des registres"
 authors: []
 tags: [INF4170]
 categories: []
-date: '2025-04-01T00:00:00Z'
+date: '2025-04-01'
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
   theme: black

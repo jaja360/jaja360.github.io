@@ -13,8 +13,6 @@ categories: []
 projects:
   - veplan
 date: 2019-12-01
-lastmod: 2022-07-16T19:44:02-04:00
-publishDate: 2022-04-16T20:44:02.661609Z
 featured: false
 draft: false
 publication: Université du Québec à Montréal

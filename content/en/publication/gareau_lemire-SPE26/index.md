@@ -17,8 +17,6 @@ categories: []
 projects:
   - Float
 date: 2026-04-28
-lastmod: 2026-04-28T16:44:02-04:00
-publishDate: 2026-02-16T16:44:02-04:00
 featured: false
 draft: false
 publication_types:

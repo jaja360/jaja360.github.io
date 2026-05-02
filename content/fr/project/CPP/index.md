@@ -2,8 +2,7 @@
 title: Planification de chemins couvrants
 summary: Ce projet visait à développer des planificateurs optimaux de chemins-couvrants. Dans le futur, il est également prévu de développer un planificateur considérant des contraintes énergétiques, de l'incertitude, ainsi que fonctionnant dans des environnements dynamiques.
 tags: [Deterministic Planning, Heuristic Search, Branch-and-Bound]
-date: "2023-04-29T00:00:00Z"
-
+date: "2023-04-29"
 image:
   caption: Exemple d'une grille 9x14 résolue grâce à l'algorithme du front d'onde.
   focal_point: Smart

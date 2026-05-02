@@ -2,8 +2,7 @@
 title: Coverage Path-Planning
 summary: This project aimed at developping optimal coverage path-planning algorithms. As futur work, we also plan on developping a CPP planner that considers energetic constraints, uncertainties, as well as dynamic environments.
 tags: [Deterministic Planning, Heuristic Search, Branch-and-Bound]
-date: "2023-04-29T00:00:00Z"
-
+date: "2023-04-29"
 image:
   caption: An example of a 9x14 CPP grid solved by the Wavefront algorithm.
   focal_point: Smart

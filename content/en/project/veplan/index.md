@@ -2,8 +2,7 @@
 title: Electric Vehicles Planning
 summary: This project aimed at creating an EV planner that considers not only the travel time and charging time, but also the waiting time at the charging stations.
 tags: [Electric Vehicles, Deterministic Planning]
-date: "2019-09-01T00:00:00Z"
-
+date: "2019-09-01"
 image:
   caption: EVs charging at a public station in Montréal
   focal_point: Smart
