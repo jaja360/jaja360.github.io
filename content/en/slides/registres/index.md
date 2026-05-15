@@ -1,18 +1,26 @@
 ---
 title: "INF4170: Table d'alias des registres"
 summary: "Introduction à la table d'alias des registres"
-authors: []
+authors:
+  - me
 tags: [INF4170]
 categories: []
 date: '2025-04-01'
 slides:
-  # Choose a theme from https://github.com/hakimel/reveal.js#theming
   theme: black
   highlight_style: dracula
+  diagram: true
   reveal_options:
     slide_number: c/t
     mouse_wheel: true
     pdf_separate_fragments: false
+  branding:
+    title:
+      show: true
+      position: "bottom-left"
+    author:
+      show: true
+      position: "bottom-center"
 
 ---
 
@@ -273,5 +281,3 @@ mem[1] ← R1b   &  mem[11] ← R1d
 - Au moins $120$ registres physiques.
 - Table d'alias des registres (RAT): registres architecturaux $\to$ registres physiques.
 - La RAT élimine les fausses dépendances.
-
----

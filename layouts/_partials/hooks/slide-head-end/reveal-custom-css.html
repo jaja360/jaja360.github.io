@@ -1,0 +1,11 @@
+{{ $reveal_custom_css := resources.Get "css/reveal_custom.css" }}
+{{ with $reveal_custom_css }}
+  {{ $reveal_custom_css = . | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $reveal_custom_css.RelPermalink }}">
+{{ end }}
+
+{{ $chroma_light_css := resources.Get "css/libs/chroma/dracula-light.css" }}
+{{ with $chroma_light_css }}
+  {{ $chroma_light_css = . | minify | fingerprint }}
+  <link id="chroma-light-theme" rel="stylesheet" href="{{ $chroma_light_css.RelPermalink }}" disabled>
+{{ end }}

@@ -39,7 +39,7 @@ EVs on the road increases faster than the number of charging
 stations. The waiting time will thus probably continue to increase at the
 majority of the stations for some time.
 
-{{< figure src="./veplan_site.png" caption="User Interface of veplan.uqam.ca" >}}
+{{< figure src="./veplan_site.png" caption="User Interface of veplan.jaelgareau.com" >}}
 
 In this project, we developed a [C++ EV
 planner](https://gitlab.info.uqam.ca/champagne_gareau.jael/veplan) and a [web
