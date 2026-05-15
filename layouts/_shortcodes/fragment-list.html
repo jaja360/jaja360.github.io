@@ -1,0 +1,13 @@
+{{ $items := slice }}
+{{ range split .Inner "\n" }}
+  {{ $line := strings.TrimSpace . }}
+  {{ if hasPrefix $line "- " }}
+    {{ $items = $items | append (strings.TrimPrefix "- " $line) }}
+  {{ end }}
+{{ end }}
+
+<ul>
+  {{ range $items }}
+    <li class="fragment">{{ . | markdownify | emojify }}</li>
+  {{ end }}
+</ul>

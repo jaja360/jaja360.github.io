@@ -16,7 +16,7 @@ tags:
 categories: []
 projects:
   - Float
-date: 2026-04-28
+date: 2026-05-06
 featured: false
 draft: false
 publication_types:
@@ -24,7 +24,7 @@ publication_types:
 publication: "Software: Practice and Experience"
 hugoblox:
   ids:
-    # doi:
+    doi: 10.1002/spe.70079
     arxiv: 2604.26019
 summary: ""
 abstract: |
@@ -42,6 +42,8 @@ abstract: |
   1.4--2$\times$ faster than the closest competitor and 2--4$\times$ faster than
   the C++ standard library function `std::to_chars` across tested workloads.
 links:
+  - type: pdf
+    url: https://onlinelibrary.wiley.com/doi/epdf/10.1002/spe.70079
   - type: code
     url: https://github.com/fastfloat/int_serialization_benchmark
   - type: benchmark
@@ -51,4 +53,3 @@ image:
   focal_point: Smart
   preview_only: false
 ---
-This paper has been accepted for publication in *Software: Practice and Experience*. The accepted author version is available on arXiv while the journal version is not yet available online.

@@ -37,7 +37,7 @@ un modèle probabiliste permettant d'estimer l'occupation des bornes et le temps
 espéré d'attente, qui a été généré à partir de données réelles du circuit
 électrique, le réseau public de bornes de recharges au Québec.
 
-{{< figure src="./veplan_site.png" caption="Interface du site veplan.uqam.ca" >}}
+{{< figure src="./veplan_site.png" caption="Interface du site veplan.jaelgareau.com" >}}
 
 Dans ce projet, nous avons développé un [Planificateur d'itinéraires pour VÉ en
 C++](https://gitlab.info.uqam.ca/champagne_gareau.jael/veplan) ainsi qu'une

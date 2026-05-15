@@ -1,0 +1,103 @@
+/* Background */ .bg {
+  color: #24292f;
+  background-color: #fff7ed;
+}
+/* PreWrapper */ .chroma {
+  color: #24292f;
+  background-color: #fff7ed;
+}
+/* Error */ .chroma .err {
+  color: #b91c1c;
+  background-color: #fee2e2;
+}
+/* CodeLine */ .chroma .cl {
+}
+/* Line */ .chroma .line {
+  display: flex;
+}
+/* LineHighlight */ .chroma .hl {
+  background-color: #ffedd5;
+}
+/* LineNumbersTable */ .chroma .lnt,
+/* LineNumbers */ .chroma .ln {
+  color: #9ca3af;
+  margin-right: 0.4em;
+  padding: 0 0.4em;
+  user-select: none;
+  white-space: pre;
+}
+/* Keyword */ .chroma .k,
+.chroma .kc,
+.chroma .kn,
+.chroma .kp,
+.chroma .kr,
+.chroma .ow {
+  color: #d946ef;
+  font-weight: 600;
+}
+/* KeywordDeclaration */ .chroma .kd,
+/* KeywordType */ .chroma .kt {
+  color: #0891b2;
+  font-weight: 600;
+}
+/* NameAttribute */ .chroma .na,
+/* NameFunction */ .chroma .nf,
+/* NameClass */ .chroma .nc {
+  color: #16a34a;
+  font-weight: 600;
+}
+/* NameBuiltin */ .chroma .nb,
+/* NameBuiltinPseudo */ .chroma .bp,
+/* NameLabel */ .chroma .nl,
+/* NameVariable */ .chroma .nv,
+.chroma .vc,
+.chroma .vg,
+.chroma .vi {
+  color: #0284c7;
+}
+/* NameConstant */ .chroma .no,
+/* LiteralNumber */ .chroma .m,
+.chroma .mb,
+.chroma .mf,
+.chroma .mh,
+.chroma .mi,
+.chroma .il,
+.chroma .mo {
+  color: #ea580c;
+}
+/* LiteralString */ .chroma .s,
+.chroma .sa,
+.chroma .sb,
+.chroma .sc,
+.chroma .dl,
+.chroma .sd,
+.chroma .s2,
+.chroma .se,
+.chroma .sh,
+.chroma .si,
+.chroma .sx,
+.chroma .sr,
+.chroma .s1,
+.chroma .ss {
+  color: #ca8a04;
+}
+/* Operator */ .chroma .o {
+  color: #dc2626;
+  font-weight: 600;
+}
+/* Comment */ .chroma .c,
+.chroma .ch,
+.chroma .cm,
+.chroma .c1,
+.chroma .cs,
+.chroma .cp,
+.chroma .cpf {
+  color: #6b7280;
+  font-style: italic;
+}
+/* GenericDeleted */ .chroma .gd {
+  color: #b91c1c;
+}
+/* GenericInserted */ .chroma .gi {
+  color: #15803d;
+}

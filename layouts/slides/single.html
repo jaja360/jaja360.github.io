@@ -50,7 +50,8 @@
     {{ end }}
   {{ end }}
   {{ range $authorList }}
-    {{ $profile := partial "functions/get_author_profile" . }}
+    {{ $slug := . | urlize }}
+    {{ $profile := partial "functions/get_author_profile" (dict "slug" $slug "title" .) }}
     {{ $authorName := . }}
     {{ if $profile.has_data }}
       {{ $authorName = $profile.title }}
