@@ -8,7 +8,7 @@ author_notes: []
 tags:
   - MDP
   - Probabilistic Planning
-  - Benchmarks
+  - Solver Selection
   - Explainable AI
   - Machine Learning
   - Classifiers
@@ -49,11 +49,8 @@ links:
     url: https://github.com/MathGravel/sspmdp-classifier
   - type: slides
     url: slides.pdf
-  - type: official
-    url: https://caiac.pubpub.org/pub/5zlwwdas/release/1
 image:
   caption: ""
   focal_point: Smart
   preview_only: false
 ---
-

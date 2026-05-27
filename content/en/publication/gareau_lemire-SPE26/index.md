@@ -8,9 +8,8 @@ author_notes: []
 tags:
   - Integer
   - Decimal
-  - Binary
-  - Shortest String
-  - Conversion
+  - String Conversion
+  - Number Serialization
   - SIMD
   - AVX-512
 categories: []

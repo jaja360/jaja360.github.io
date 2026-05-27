@@ -10,7 +10,7 @@ authors:
 author_notes: []
 tags:
   - Electric Vehicles
-  - Cooperative
+  - Cooperative Planning
   - Multi-Agent
   - Contingency Planning
   - Deterministic Planning
@@ -54,4 +54,3 @@ image:
   focal_point: Smart
   preview_only: false
 ---
-

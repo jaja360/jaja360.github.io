@@ -6,9 +6,10 @@ authors:
 author_notes: []
 tags:
   - Electric Vehicles
+  - Route Planning
+  - Charging Stations
+  - Uncertainty
   - Contingency Planning
-  - Deterministic Planning
-  - Graph Relabeling
 categories: []
 projects:
   - veplan
@@ -62,4 +63,3 @@ image:
   focal_point: Smart
   preview_only: false
 ---
-

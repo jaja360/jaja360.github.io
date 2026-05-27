@@ -9,8 +9,8 @@ author_notes: []
 tags:
   - Coverage Path Planning
   - Deterministic Planning
-  - Heuristic
-  - Branch and Bound
+  - Heuristic Search
+  - Branch-and-Bound
 categories: []
 projects:
   - CPP
@@ -49,4 +49,3 @@ image:
   focal_point: Smart
   preview_only: false
 ---
-

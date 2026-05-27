@@ -1,4 +1,5 @@
 ---
+
 title: "Converting Binary Floating-Point Numbers to Shortest Decimal Strings: An Experimental Review"
 subtitle: ""
 authors:
@@ -8,9 +9,8 @@ author_notes: []
 tags:
   - Floating-Point
   - Decimal
-  - Binary
-  - Shortest String
-  - Conversion
+  - String Conversion
+  - Number Serialization
 categories: []
 projects:
   - numeric
@@ -52,4 +52,3 @@ image:
   focal_point: Smart
   preview_only: false
 ---
-
