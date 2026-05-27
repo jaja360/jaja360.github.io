@@ -13,7 +13,7 @@ tags:
   - Conversion
 categories: []
 projects:
-  - Float
+  - numeric
 date: 2026-01-29
 featured: false
 draft: false

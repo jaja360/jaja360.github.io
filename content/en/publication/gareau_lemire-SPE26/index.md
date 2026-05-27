@@ -15,7 +15,7 @@ tags:
   - AVX-512
 categories: []
 projects:
-  - Float
+  - numeric
 date: 2026-05-06
 featured: false
 draft: false
