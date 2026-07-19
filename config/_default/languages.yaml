@@ -5,13 +5,10 @@
 # Default language
 en:
   locale: en-US
-  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
-  contentDir: content/en
 
 # Uncomment the lines below to configure your website in a second language.
 fr:
   locale: fr
-  contentDir: content/fr
   # title: Titre en français
   params:
     description: CV académique de Jaël Champagne Gareau, chercheur postdoctoral à l'Université TÉLUQ
