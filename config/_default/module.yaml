@@ -11,6 +11,18 @@ imports:
 
 # Install any Hugo Blox within the `hugo-blox/blox/` folder
 mounts:
+  - source: content/en/slides
+    target: content/slides
+    sites:
+      matrix:
+        languages:
+          - fr
+  - source: content/fr/courses
+    target: content/courses
+    sites:
+      matrix:
+        languages:
+          - en
   - source: content/en
     target: content
     sites:

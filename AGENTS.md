@@ -60,12 +60,13 @@ Hugo modules are managed via `go.mod`. Key modules:
 ├── content/
 │   ├── en/              # English content
 │   │   ├── _index.md    # Homepage (landing page with blocks)
-│   │   ├── authors/     # Author profiles (admin/ is the site owner)
-│   │   ├── publications/# Academic publications
-│   │   ├── projects/    # Research projects
-│   │   ├── slides/      # Reveal.js presentations
-│   │   └── courses/     # Course documentation
-│   └── fr/              # French content (mirrors en/ structure)
+│   │   ├── publication/ # Academic publications (also served to fr)
+│   │   ├── project/     # Research projects
+│   │   └── slides/      # Reveal.js presentations (also served to fr)
+│   └── fr/              # French content
+│       ├── _index.md    # Homepage
+│       ├── courses/     # Course documentation (also served to en)
+│       └── project/     # Research projects
 ├── static/
 │   ├── en/uploads/      # English static files (resume.pdf)
 │   └── fr/uploads/      # French static files (resume.pdf)
@@ -73,7 +74,7 @@ Hugo modules are managed via `go.mod`. Key modules:
 │   ├── css/             # Custom CSS (reveal_custom.css for slides)
 │   └── media/           # Site icons and images
 ├── layouts/_partials/   # Custom Hugo partials (overrides theme)
-├── data/                # Data files (page_sharer.yaml for social sharing)
+├── data/                # Data files (page_sharer.yaml, authors/{me.yaml,fr/me.yaml})
 ├── deploy               # Build script for manual deployment
 ├── netlify.toml         # Netlify build configuration
 ├── go.mod               # Hugo modules (Go)
@@ -82,7 +83,7 @@ Hugo modules are managed via `go.mod`. Key modules:
 
 ## Content Types
 
-### Publications (`content/{lang}/publications/`)
+### Publications (`content/en/publication/`, shared with `fr`)
 
 Academic papers with BibTeX support:
 
@@ -90,7 +91,7 @@ Academic papers with BibTeX support:
 ---
 title: Paper Title
 authors:
-  - admin              # References content/authors/admin
+  - me                 # Site owner (data/authors/me.yaml)
   - Co-author Name
 publication_types:
   - paper-conference   # or: article-journal, thesis, etc.
@@ -116,7 +117,7 @@ Abstract text here.
 
 Include supporting files in the publication folder: `cite.bib`, `featured.png`, PDFs.
 
-### Projects (`content/{lang}/projects/`)
+### Projects (`content/en/project/` + `content/fr/project/`)
 
 ```yaml
 ---
@@ -137,16 +138,16 @@ links:
 Markdown content describing the project.
 ```
 
-### Author Profile (`content/{lang}/authors/admin/`)
+### Author Profile (`data/authors/me.yaml`, `data/fr/authors/me.yaml`)
 
-The `admin` author is the site owner. Edit `_index.md` for:
-- Display name, role, organization
-- Social profiles (GitHub, LinkedIn, Google Scholar, ORCID)
+The `me` author (key `me`, schema `hugoblox/author/v1`) is the site owner. `data/authors/me.yaml` holds the full English profile; `data/fr/authors/me.yaml` overrides only the French fields (role, bio, etc.). Edit for:
+- Display name, role, affiliation
+- Social profiles / IDs (Google Scholar, ORCID, links)
 - Education history
 - Languages and skills
-- Bio text (below the front matter)
+- `bio` multiline text
 
-### Slides (`content/{lang}/slides/`)
+### Slides (`content/en/slides/`, shared with `fr`)
 
 Reveal.js presentations using Hugo shortcodes:
 
@@ -184,13 +185,13 @@ type: landing
 sections:
   - block: resume-biography-3
     content:
-      username: admin
+      username: me
   - block: collection
     id: publications
     content:
       filters:
         folders:
-          - publications
+          - publication
     design:
       view: citation
 ---
@@ -200,11 +201,13 @@ sections:
 
 - English content: `content/en/`
 - French content: `content/fr/`
-- Both languages share the same structure
 - Language switcher enabled in header/footer
 - Default language is English with subdirectory (`/en/`, `/fr/`)
-
-When adding content, create matching files in both language directories.
+- Some sections are **shared across languages via module mounts** (`config/_default/module.yaml`), not duplicated on disk:
+  - `content/en/publication` → served to `en` + `fr` (`/fr/publication/<slug>/`)
+  - `content/en/slides` → served to `en` + `fr` (`/fr/slides/<slug>/`)
+  - `content/fr/courses` → served to `fr` + `en` (`/en/courses/<slug>/`)
+  - `content/en/project` and `content/fr/project` are NOT shared: keep both language versions in sync manually.
 
 ## Configuration
 
@@ -263,24 +266,25 @@ Builds site and generates Pagefind search index. Rsync command (commented) avail
 
 ### Adding a New Publication
 
-1. Create folder: `content/en/publications/author-venue-year/`
+1. Create folder: `content/en/publication/author-venue-year/`
 2. Add `index.md` with publication front matter
 3. Add `cite.bib` with BibTeX entry
 4. Add optional files: `featured.png`, `slides.pdf`, `poster.pdf`
-5. Create French version in `content/fr/publications/` if needed
+
+No French copy is needed: the `content/en/publication` → `content/publication` module mount already serves these pages to `fr` (identical files, `/fr/publication/<slug>/`).
 
 ### Adding a New Project
 
-1. Create folder: `content/en/projects/project-slug/`
+1. Create folder: `content/en/project/project-slug/`
 2. Add `index.md` with project front matter and content
 3. Add `featured.png` for thumbnail
-4. Create French version
+4. Add the French version under `content/fr/project/project-slug/` (projects are NOT shared by a mount)
 
 ### Updating Author Bio
 
-Edit `content/en/authors/admin/_index.md`:
-- Front matter: education, organizations, social links
-- Body: Bio paragraph
+Edit `data/authors/me.yaml` (English) and `data/fr/authors/me.yaml` (French overrides):
+- `role`, `affiliations`, `ids`, `links`, `interests`, `education`, `languages`
+- `bio` block for the biography paragraph
 
 ### Adding a Presentation
 
@@ -295,10 +299,12 @@ Edit `content/en/authors/admin/_index.md`:
 2. **Pagefind Search**: Search index must be rebuilt after content changes. The `./deploy` script handles this automatically.
 3. **Git Info**: `enableGitInfo: true` in hugo.yaml means Hugo uses git commit dates. Ensure proper git history.
 4. **Image Processing**: Hugo caches processed images in `resources/`. This folder is git-ignored but cached in CI.
-5. **Bilingual Parity**: Keep `content/en/` and `content/fr/` in sync. Missing translations won't generate cross-language links.
-6. **Author References**: Use `admin` to reference the site owner in publication/project `authors` lists.
+5. **Bilingual Parity**: Sections shared by mounts (publication, slides, courses) only need one copy; `project` pages need both `content/en/project/` and `content/fr/project/` versions. Missing translations won't generate cross-language links.
+6. **Author References**: Use `me` to reference the site owner in publication/project `authors` lists (profile lives in `data/authors/me.yaml`).
 7. **Relative Links in Publications**: Links to PDFs/files in publication front matter are relative to the publication folder, not the site root.
 8. **Tailwind v4**: Uses `@tailwindcss/cli` v4.1+. Configuration differs from v3.
+9. **Hugo ignores symlinks**: `content/fr/slides -> ../en/slides` and `content/en/courses -> ../fr/courses` are NOT followed by Hugo (same for the untracked `content/fr/publication -> ../en/publication`): a symlinked content dir silently produces zero pages. Cross-language sharing is done with `module.mounts` (`sites.matrix.languages`) in `config/_default/module.yaml`; add/edit mounts there, the symlinks are cosmetic only.
+10. **Tailwind in security sandbox**: Hugo must be allowed to exec `tailwindcss` (`security.exec.allow` in `config/_default/hugo.yaml`), otherwise CSS builds fail with "access denied ... not whitelisted in policy security.exec.allow".
 
 ## External Resources
 
